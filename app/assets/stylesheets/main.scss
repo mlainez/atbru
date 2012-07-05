@@ -151,6 +151,71 @@ body {
       }
     }
   }
+
+  #speakers-call {
+    background: url("cta_bg.png") no-repeat center center;
+    text-align: center;
+    line-height: 33px;
+    font-weight: 600;
+    color: #fff;
+    font-size: 0.9em;
+  }
+
+  #speaker-list {
+    border-left: 4px solid $main-color;
+    margin: 0 0 0 35px;
+    li {
+      list-style: none;
+      position: relative;
+      padding: 0 0 10px 0;
+      .bullet {
+        position: absolute;
+        top: 0;
+        left: -31px;
+        height: 18px;
+        width: 18px;
+        background: url("bullet.png");
+      }
+      .name {
+        font-weight: 500;
+        color: $main-color;
+        text-transform: uppercase;
+        padding: 0 0 5px 0;
+      }
+      .bio {
+        position: relative;
+        min-height: 128px;
+        img {
+          position: absolute;
+          width: 128px;
+          height: 128px;
+          float: left;
+        }
+        p {
+          margin: 0 0 0 148px;
+          color: #212121;
+          width: 738px;
+        }
+      }
+    }
+  }
+  .top-link {
+    position: relative;
+    top: -15px;
+    left: 11px;
+    background: $main-color;
+    color: #fff;
+    text-align: center;
+    width: 50px;
+    padding: 3px 0;
+    font-size: 0.8em;
+    border-radius: 9px;
+    -moz-border-radius: 9px;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
 }
 
 .push {

@@ -10,6 +10,7 @@ en:
     register: "Register"
   slideshow:
     caption: "Join us for the AgileTour event in Brussels on 26 October 2012"
+  speakers_call: "Come as a speaker"
   footer:
     copyright: "AgileTour Brussels 2012 | Imagine an agile world."
 
