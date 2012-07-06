@@ -19,10 +19,14 @@
           #counter
             %span.days= days_left
             = t("register.days_left")
-          .button= link_to t("register.register"), "#"
+          .button= link_to t("register.register"), "http://at2012.agiletour.org/en/brussels.html"
       #content
         #slideshow
-          .caption= t("slideshow.caption")
+          .slides_container
+            %div= image_tag "atomium.jpg"
+            %div= image_tag "beers.png"
+            %div= image_tag "place.jpg"
+            %div= image_tag "flags.jpg"
         = yield
       .push
     %footer#footer
@@ -32,3 +36,12 @@
           %ul
             %li= link_to t("menu.home"), root_url
             %li= link_to t("menu.speakers"), speakers_url
+
+:javascript
+  $("#slideshow").slides({
+    play: 5000,
+    pause: 2500,
+    generateNextPrev: false,
+    generatePagination: false,
+    effect: 'fade'
+  });
