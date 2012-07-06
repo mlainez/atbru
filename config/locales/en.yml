@@ -4,13 +4,13 @@
 en:
   menu:
     home: "Home"
-    speakers: "Speakers"
+    speakers: "Call for speakers"
   register:
     days_left: "Days left"
     register: "Register"
   slideshow:
     caption: "Join us for the AgileTour event in Brussels on 26 October 2012"
-  speakers_call: "Come as a speaker"
+  speakers_call: "Call for speakers!"
   footer:
     copyright: "AgileTour Brussels 2012 | Imagine an agile world."
 
