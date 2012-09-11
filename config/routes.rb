@@ -51,6 +51,9 @@ Atbru::Application.routes.draw do
   # root :to => 'welcome#index'
 
   resources :speakers
+  resources :sponsors
+  resources :details
+  resource :program, :controller => "Program"
 
   root :to => 'welcome#index'
 

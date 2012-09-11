@@ -17,6 +17,9 @@
           %ul
             %li= link_to t("menu.home"), root_url
             %li= link_to t("menu.speakers"), speakers_url
+            %li= link_to t("menu.program"), program_url
+            %li= link_to t("menu.sponsors"), sponsors_url
+            %li= link_to t("menu.details"), details_url
         #register-box
           #counter
             %span.days= days_left
@@ -38,6 +41,9 @@
           %ul
             %li= link_to t("menu.home"), root_url
             %li= link_to t("menu.speakers"), speakers_url
+            %li= link_to t("menu.program"), program_url
+            %li= link_to t("menu.sponsors"), sponsors_url
+            %li= link_to t("menu.details"), details_url
 
 :javascript
   $("#slideshow").slides({
