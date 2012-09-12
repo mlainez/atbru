@@ -286,6 +286,14 @@ body {
     td.small, th.small{
       width: 14%;
       font-weight: bold;
+      padding: .3em 1em;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    a:hover {
+      color: #888;
     }
     th {
       font-weight: bold;
@@ -299,11 +307,16 @@ body {
     td {
       border-bottom: 1px solid #e5eff8;
       border-left: 1px solid #e5eff8;
-      padding: .3em 1em;
+      padding: .6em 1.5em;
       text-align: center;
       width: 20%;
       .name{
         margin-top: 10px;
+      }
+    }
+    tr{
+      .break{
+
       }
     }
   }
