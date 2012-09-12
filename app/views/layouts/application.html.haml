@@ -45,40 +45,4 @@
             %li= link_to t("menu.sponsors"), sponsors_url
             %li= link_to t("menu.details"), details_url
 
-:javascript
-  $("#slideshow").slides({
-    play: 5000,
-    pause: 2500,
-    generateNextPrev: false,
-    generatePagination: false,
-    effect: 'fade',
-    crossfade: true,
-    slideSpeed: 1000
-  });
-
-  var myOptions = {
-    center: new google.maps.LatLng(50.8267908, 4.4002883),
-    zoom: 15,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  var map = new google.maps.Map(document.getElementById("map"), myOptions);
-  var contentString = '<div>'+
-    'ICAB nv | Site Arsenal' +
-    '<br />'+
-    'Rue des Pères blancs 4'+
-    '<br />'+
-    '1040 Bruxelles'+
-    '</div>';
-
-  var infowindow = new google.maps.InfoWindow({
-    content: contentString
-  });
-
-  var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(50.8267908, 4.4002883),
-    map: map,
-    title:"ICAB Brussels"
-  });
-
-  infowindow.open(map,marker);
-  map.panBy(20, -90);
+= render "shared/map"
