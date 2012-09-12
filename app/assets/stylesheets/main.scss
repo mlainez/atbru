@@ -295,6 +295,21 @@ body {
     a:hover {
       color: #888;
     }
+    td.food{
+      background-color: #FFFFAA;
+    }
+    td.all{
+      background-color: #A8CFFF;
+    }
+    td.conf{
+      background-color: #D1FFB3;
+    }
+    td.workshop{
+      background-color: #FFBBBB;
+    }
+    td.tech{
+      background-color: #FFC48E;
+    }
     th {
       font-weight: bold;
       color: #11304A;
