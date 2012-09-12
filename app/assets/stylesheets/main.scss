@@ -275,3 +275,36 @@ body {
     }
   }
 }
+
+#program {
+  table {
+    width: 90%;
+    border-top: 1px solid #e5eff8;
+    border-right: 1px solid #e5eff8;
+    margin: 1em auto;
+    border-collapse: collapse;
+    td.small, th.small{
+      width: 14%;
+      font-weight: bold;
+    }
+    th {
+      font-weight: bold;
+      color: #11304A;
+      border-bottom: 1px solid #e5eff8;
+      border-left: 1px solid #e5eff8;
+      padding: .3em 1em;
+      text-align: center;
+      width: 20%;
+    }
+    td {
+      border-bottom: 1px solid #e5eff8;
+      border-left: 1px solid #e5eff8;
+      padding: .3em 1em;
+      text-align: center;
+      width: 20%;
+      .name{
+        margin-top: 10px;
+      }
+    }
+  }
+}
