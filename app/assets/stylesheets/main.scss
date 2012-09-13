@@ -287,6 +287,10 @@ body {
       width: 14%;
       font-weight: bold;
       padding: .3em 1em;
+      background-color: #eee;
+    }
+    th{
+      background-color: #eee;
     }
     a {
       text-decoration: none;
@@ -296,19 +300,10 @@ body {
       color: #888;
     }
     td.food{
-      background-color: #FFFFAA;
+      background-color: #ddd;
     }
     td.all{
-      background-color: #A8CFFF;
-    }
-    td.conf{
-      background-color: #D1FFB3;
-    }
-    td.workshop{
-      background-color: #FFBBBB;
-    }
-    td.tech{
-      background-color: #FFC48E;
+      background-color: #ddd;
     }
     th {
       font-weight: bold;
