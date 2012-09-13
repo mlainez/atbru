@@ -1,0 +1,242 @@
+%h2 Tickets
+
+%p
+  Early-bird: 70 € (only 30 tickets)
+  %br
+  Regular: 100 € (50 tickets)
+
+%p
+  All stated prices are exclusive of VAT. We will apply the following VAT rates:
+
+%p
+  Company with Belgian VAT number: 21% Belgian VAT
+  %br
+  Company with non-Belgian VAT number: 0% VAT
+
+%h2 Purchase orders
+%p
+  If your company requires a Purchase Order before paying an invoice, let us know so that we can put its reference number on the invoice. This will help your accounting department to pay the invoice on time.
+
+%h2 Invoice information
+= form_tag registration_path, :id => "registration-form" do
+  %table
+    %tr
+      %td
+        %strong= label_tag "Name*"
+        %br
+        = text_field_tag "name", params[:name], :class => "required"
+
+      %td
+        = label_tag "Company"
+        %br
+        = text_field_tag "company", params[:company]
+    %tr
+      %td
+        = label_tag "VAT"
+        %br
+        = text_field_tag "vat", params[:vat], :class => "medium"
+
+      %td
+        = label_tag "Purchase order"
+        %br
+        = text_field_tag "purchase_order", params[:purchase_order], :class => "medium"
+    %tr
+      %td
+        %strong= label_tag "Address*"
+        %br
+        = text_field_tag "address", params[:address], :class => "required"
+
+      %td
+        %strong= label_tag "Zip*"
+        %br
+        = text_field_tag "zip", params[:zip], :class => "required small"
+    %tr
+      %td
+        %strong= label_tag "City*"
+        %br
+        = text_field_tag "city", params[:city], :class => "required"
+
+      %td
+        %strong= label_tag "Country*"
+        %br
+        = text_field_tag "country", params[:country], :class => "required"
+    %tr
+      %td
+        %strong= label_tag "Email*"
+        %br
+        = text_field_tag "email", params[:email], :class => "required email"
+
+      %td
+        = label_tag "Phone"
+        %br
+        = text_field_tag "phone", params[:phone], :class => "medium"
+  %br
+  %h2 Participants
+
+  .visible
+    %strong Participant 1
+    %table
+      %tr
+        %td
+          %strong= label_tag "Name*"
+          %br
+          = text_field_tag "participant1_name", params[:participant1_name], :class => "required"
+
+        %td
+          %strong= label_tag "Email*"
+          %br
+          = text_field_tag "participant1_email", params[:participant1_email], :class => "required"
+
+  .hidden
+    %strong Participant 2
+    %table
+      %tr
+        %td
+          %strong= label_tag "Name*"
+          %br
+          = text_field_tag "participant2_name", params[:participant2_name]
+
+        %td
+          %strong= label_tag "Email*"
+          %br
+          = text_field_tag "participant2_email", params[:participant2_email]
+
+  .hidden
+    %strong Participant 3
+    %table
+      %tr
+        %td
+          %strong= label_tag "Name*"
+          %br
+          = text_field_tag "participant3_name", params[:participant3_name]
+
+        %td
+          %strong= label_tag "Email*"
+          %br
+          = text_field_tag "participant3_email", params[:participant3_email]
+
+  .hidden
+    %strong Participant 4
+    %table
+      %tr
+        %td
+          %strong= label_tag "Name*"
+          %br
+          = text_field_tag "participant4_name", params[:participant4_name]
+
+        %td
+          %strong= label_tag "Email*"
+          %br
+          = text_field_tag "participant4_email", params[:participant4_email]
+
+  .hidden
+    %strong Participant 5
+    %table
+      %tr
+        %td
+          %strong= label_tag "Name*"
+          %br
+          = text_field_tag "participant5_name", params[:participant5_name]
+
+        %td
+          %strong= label_tag "Email*"
+          %br
+          = text_field_tag "participant5_email", params[:participant5_email]
+
+  %p= link_to "Add participant", "#add-participant", :class => "add-participant"
+
+  %p
+    = check_box_tag "agree_terms", params[:agree_terms], nil, :class => "required"
+    %strong= label_tag "I have read the conditions below and I agree with them"
+
+  %p
+    = submit_tag "Register"
+
+%h2 Payment by Bank Transfer
+
+%p
+  Agile Systems vzw,
+  %br
+  St Pancratiuslaan 49,
+  %br
+  1933 Sterrebeek, Belgium
+  %br
+  Bank (Belgium): Dexia Sterrebeek
+  %br
+  Mechelsesteenweg 223,
+  %br
+  1933 Sterrebeek,
+  %br
+  Belgium
+  %br
+  IBAN BE48-0682-4365-4327
+  %br
+  BIC GKCCBEBB
+
+%p
+  Please mention your invoice number in the comment field of your transfer.
+%h2 Credit card payments
+:plain
+  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
+  method="post">
+  <input type="hidden" name="cmd" value="_s-xclick">
+  <input type="hidden" name="hosted_button_id" value="KY3F5DJVRFR4J">
+  <input type="image"
+  src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+  border="0" name="submit" alt="PayPal - The safer, easier way to pay
+  online!">
+  <img alt="" border="0"
+  src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
+  height="1">
+  </form>
+%br
+
+%h2 We don't accept cash or cheque payments.
+
+
+%h2
+  Terms and conditions
+
+%p
+  After registration, you will receive a confirmation of your registration and an invoice. Don't forget to mention your VAT number so that we can apply the correct VAT rate.
+  %br
+  %br
+  If your company requires a Purchase Order, let us know so that we can put its reference number on the invoice.
+  %br
+  We will email PDF invoices by default and will mail hardcopies upon request.
+  %br
+  Your registration is confirmed as soon as payment has been received. All registrations must be paid before the conference starts!
+  %br
+  %br
+  If you haven't received a confirmation from us that your payment was received, bring a proof of payment to the conference. See the payment  page for a list of payment methods. We will notify you of the receipt of your payment and confirm your registration within 3-4 business days.   If you don't get a confirmation, please contact accounts.
+  %br
+  %br
+  The number of places is limited to 80, registration is on a first paid, first served basis.
+  %br
+  %br
+  The conference fee covers attendance to the conference sessions and includes drinks, 1 lunch and beers after in the cafeteria. This fee does not include a hotel room and breakfast.
+  %br
+  %br
+  The organizers have the right to cancel the event. In this case all paid fees will be refunded.
+  %br
+  %br
+  You can transfer your paid registration to someone else by sending the name, email address and any food preferences of the replacement to accounts.
+  %br
+  Contact accounts to cancel a registration. We will refund the amount paid if we can transfer the registration to another participant. As the conference usually sells out, we will likely find someone to replace you if you cancel at least two weeks before the conference.
+
+%h2 Privacy Statements
+%p
+  All information entered in this form will be stored in the database of Agile Systems vzw.
+
+  This information is only used to handle the administration of the Agile Tour Brussels conference and to keep you informed about this and future events. In no case will this information be transfered to a third party.
+
+:javascript
+  $("#registration-form").validate();
+  $(".add-participant").click(function(){
+    var hiddenParticipant = $(".hidden").first()
+    hiddenParticipant.removeClass("hidden");
+    hiddenParticipant.show();
+    if($(".hidden").length == 0){
+      $("a.add-participant").hide();
+    }
+  })

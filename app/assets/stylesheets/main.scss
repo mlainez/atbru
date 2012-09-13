@@ -331,3 +331,38 @@ body {
     }
   }
 }
+
+#registration-form{
+  table{
+    margin-bottom: 10px;
+    td{
+      padding: 10px 100px 5px 0px;
+    }
+  }
+
+  strong{
+    font-weight: bold;
+  }
+  label.error{
+    color: #c00;
+    display: block;
+    font-weight: bold;
+  }
+  input[type="text"]{
+    width: 300px;
+  }
+  input{
+    line-height: 1.4em;
+    font-size: 1.1em;
+  }
+  input.medium{
+    width: 200px;
+  }
+  input.small{
+    width: 100px;
+  }
+}
+
+.hidden{
+  display: none;
+}

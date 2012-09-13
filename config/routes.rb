@@ -54,6 +54,7 @@ Atbru::Application.routes.draw do
   resources :sponsors
   resources :details
   resources :sessions
+  resource :registration, :controller => "Registration"
   resource :program, :controller => "Program"
 
   root :to => 'welcome#index'
