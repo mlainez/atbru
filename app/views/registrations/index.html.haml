@@ -18,7 +18,7 @@
   If your company requires a Purchase Order before paying an invoice, let us know so that we can put its reference number on the invoice. This will help your accounting department to pay the invoice on time.
 
 %h2 Invoice information
-= form_for @registration, :html => {:id => "registration-form"} do |f|
+= nested_form_for @registration, :html => {:id => "registration-form"} do |f|
   %table
     %tr
       %td
@@ -70,12 +70,29 @@
         = f.label :phone, "Phone"
         %br
         = f.text_field :phone, :class => "medium"
+
   %br
-  %p= link_to "Add participant", "#add-participant", :class => "add-participant"
+  %strong Participants
+
+  = f.fields_for :participants do |participant_form|
+    %table
+      %tr
+        %td
+          %strong= participant_form.label :name, "Name*"
+          %br
+          = participant_form.text_field :name,  :class => "required"
+        %td
+          %strong= participant_form.label :email, "Email*"
+          %br
+          = participant_form.text_field :email, :class => "required email"
+        %td
+          %br
+          = participant_form.link_to_remove "Remove"
+  %p= f.link_to_add "Add a participant", :participants
 
   %p
-    = check_box_tag "agree_terms", params[:agree_terms], nil, :class => "required"
-    %strong= label_tag "I have read the conditions below and I agree with them"
+    = f.check_box :agree_terms, :class => "required"
+    %strong= f.label :agree_terms, "I have read the conditions below and I agree with them"
 
   %p
     = submit_tag "Register"
@@ -104,19 +121,34 @@
 %p
   Please mention your invoice number in the comment field of your transfer.
 %h2 Credit card payments
-:plain
-  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
-  method="post">
-  <input type="hidden" name="cmd" value="_s-xclick">
-  <input type="hidden" name="hosted_button_id" value="KY3F5DJVRFR4J">
-  <input type="image"
-  src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
-  border="0" name="submit" alt="PayPal - The safer, easier way to pay
-  online!">
-  <img alt="" border="0"
-  src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
-  height="1">
-  </form>
+- if @participant_count <= 30
+  :plain
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
+    method="post">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="KY3F5DJVRFR4J">
+    <input type="image"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    border="0" name="submit" alt="PayPal - The safer, easier way to pay
+    online!">
+    <img alt="" border="0"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
+    height="1">
+    </form>
+- else
+  :plain
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
+    method="post">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="RZN2F79KPYHBA">
+    <input type="image"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    border="0" name="submit" alt="PayPal - The safer, easier way to pay
+    online!">
+    <img alt="" border="0"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
+    height="1">
+    </form>
 %br
 
 %h2 We don't accept cash or cheque payments.
@@ -160,11 +192,3 @@
 
 :javascript
   $("#registration-form").validate();
-  $(".add-participant").click(function(){
-    var hiddenParticipant = $(".hidden").first()
-    hiddenParticipant.removeClass("hidden");
-    hiddenParticipant.show();
-    if($(".hidden").length == 0){
-      $("a.add-participant").hide();
-    }
-  })

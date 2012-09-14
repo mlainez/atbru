@@ -1,6 +1,8 @@
 class RegistrationsController < ApplicationController
   def index
     @registration = Registration.new
+    @registration.participants.build
+    @participant_count = Participant.count
   end
 
   def create
