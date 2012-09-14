@@ -3,6 +3,8 @@ class RegistrationController < ApplicationController
   end
 
   def create
-    raise params.inspect
+    RegistrationMailer.registration_created(params).deliver
+    flash[:notice] = "We have been notified of your registration, you should receive an invoice in the following hours. Thank you!"
+    redirect_to registration_path
   end
 end
