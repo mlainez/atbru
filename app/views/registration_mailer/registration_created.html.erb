@@ -1,29 +1,14 @@
 ========= Invoice ==========
 
-Name           : <%= @params[:name] %>
-Company        : <%= @params[:company] %>
-VAT            : <%= @params[:vat] %>
-Purchase Order : <%= @params[:purchase_order] %>
-Address        : <%= @params[:address] %>
-Zip            : <%= @params[:zip] %>
-City           : <%= @params[:city] %>
-Country        : <%= @params[:country] %>
-Email          : <%= @params[:email] %>
-Phone          : <%= @params[:phone] %>
+Name           : <%= @registration.name %>
+Company        : <%= @registration.company %>
+VAT            : <%= @registration.vat %>
+Purchase Order : <%= @registration.purchase_order %>
+Address        : <%= @registration.address %>
+Zip            : <%= @registration.zip %>
+City           : <%= @registration.city %>
+Country        : <%= @registration.country %>
+Email          : <%= @registration.email %>
+Phone          : <%= @registration.phone %>
 
 ========= Participants ====
-
-Name  : <%= @params[:participant1_name] %>
-Email : <%= @params[:participant1_email] %>
-
-Name  : <%= @params[:participant2_name] %>
-Email : <%= @params[:participant2_email] %>
-
-Name  : <%= @params[:participant3_name] %>
-Email : <%= @params[:participant3_email] %>
-
-Name  : <%= @params[:participant4_name] %>
-Email : <%= @params[:participant4_email] %>
-
-Name  : <%= @params[:participant5_name] %>
-Email : <%= @params[:participant5_email] %>

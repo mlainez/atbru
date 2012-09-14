@@ -24,7 +24,7 @@
           #counter
             %span.days= days_left
             = t("register.days_left")
-          .button= link_to t("register.register"), registration_path
+          .button= link_to t("register.register"), registrations_path
       #content
         #slideshow
           .slides_container
@@ -32,6 +32,13 @@
             %div= image_tag "beers.png"
             %div= image_tag "place.jpg"
             %div= image_tag "flags.jpg"
+        #flash
+          - if flash[:notice]
+            %p.notice
+              = flash[:notice]
+          - if flash[:error]
+            %p.error
+              = flash[:error]
         = yield
       .push
     %footer#footer

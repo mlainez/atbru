@@ -1,4 +1,8 @@
 Atbru::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -53,8 +57,8 @@ Atbru::Application.routes.draw do
   resources :speakers
   resources :sponsors
   resources :details
-  resources :sessions
-  resource :registration, :controller => "Registration"
+  resources :presentations
+  resources :registrations
   resource :program, :controller => "Program"
 
   root :to => 'welcome#index'

@@ -18,131 +18,59 @@
   If your company requires a Purchase Order before paying an invoice, let us know so that we can put its reference number on the invoice. This will help your accounting department to pay the invoice on time.
 
 %h2 Invoice information
-= form_tag registration_path, :id => "registration-form" do
+= form_for @registration, :html => {:id => "registration-form"} do |f|
   %table
     %tr
       %td
-        %strong= label_tag "Name*"
+        %strong= f.label :name, "Name*"
         %br
-        = text_field_tag "name", params[:name], :class => "required"
+        = f.text_field :name, :class => "required"
 
       %td
-        = label_tag "Company"
+        = f.label :company, "Company"
         %br
-        = text_field_tag "company", params[:company]
+        = f.text_field :company
     %tr
       %td
-        = label_tag "VAT"
+        = f.label :vat, "VAT"
         %br
-        = text_field_tag "vat", params[:vat], :class => "medium"
+        = f.text_field :vat, :class => "medium"
 
       %td
-        = label_tag "Purchase order"
+        = f.label :purchase_order, "Purchase order"
         %br
-        = text_field_tag "purchase_order", params[:purchase_order], :class => "medium"
+        = f.text_field :purchase_order, :class => "medium"
     %tr
       %td
-        %strong= label_tag "Address*"
+        %strong= f.label :address, "Address*"
         %br
-        = text_field_tag "address", params[:address], :class => "required"
+        = f.text_field :address, :class => "required"
 
       %td
-        %strong= label_tag "Zip*"
+        %strong= f.label :zip, "Zip*"
         %br
-        = text_field_tag "zip", params[:zip], :class => "required small"
+        = f.text_field :zip, :class => "required small"
     %tr
       %td
-        %strong= label_tag "City*"
+        %strong= f.label :city, "City*"
         %br
-        = text_field_tag "city", params[:city], :class => "required"
+        = f.text_field :city, :class => "required"
 
       %td
-        %strong= label_tag "Country*"
+        %strong= f.label :country, "Country*"
         %br
-        = text_field_tag "country", params[:country], :class => "required"
+        = f.text_field :country, :class => "required"
     %tr
       %td
-        %strong= label_tag "Email*"
+        %strong= f.label :email, "Email*"
         %br
-        = text_field_tag "email", params[:email], :class => "required email"
+        = f.text_field :email, :class => "required email"
 
       %td
-        = label_tag "Phone"
+        = f.label :phone, "Phone"
         %br
-        = text_field_tag "phone", params[:phone], :class => "medium"
+        = f.text_field :phone, :class => "medium"
   %br
-  %h2 Participants
-
-  .visible
-    %strong Participant 1
-    %table
-      %tr
-        %td
-          %strong= label_tag "Name*"
-          %br
-          = text_field_tag "participant1_name", params[:participant1_name], :class => "required"
-
-        %td
-          %strong= label_tag "Email*"
-          %br
-          = text_field_tag "participant1_email", params[:participant1_email], :class => "required"
-
-  .hidden
-    %strong Participant 2
-    %table
-      %tr
-        %td
-          %strong= label_tag "Name*"
-          %br
-          = text_field_tag "participant2_name", params[:participant2_name]
-
-        %td
-          %strong= label_tag "Email*"
-          %br
-          = text_field_tag "participant2_email", params[:participant2_email]
-
-  .hidden
-    %strong Participant 3
-    %table
-      %tr
-        %td
-          %strong= label_tag "Name*"
-          %br
-          = text_field_tag "participant3_name", params[:participant3_name]
-
-        %td
-          %strong= label_tag "Email*"
-          %br
-          = text_field_tag "participant3_email", params[:participant3_email]
-
-  .hidden
-    %strong Participant 4
-    %table
-      %tr
-        %td
-          %strong= label_tag "Name*"
-          %br
-          = text_field_tag "participant4_name", params[:participant4_name]
-
-        %td
-          %strong= label_tag "Email*"
-          %br
-          = text_field_tag "participant4_email", params[:participant4_email]
-
-  .hidden
-    %strong Participant 5
-    %table
-      %tr
-        %td
-          %strong= label_tag "Name*"
-          %br
-          = text_field_tag "participant5_name", params[:participant5_name]
-
-        %td
-          %strong= label_tag "Email*"
-          %br
-          = text_field_tag "participant5_email", params[:participant5_email]
-
   %p= link_to "Add participant", "#add-participant", :class => "add-participant"
 
   %p

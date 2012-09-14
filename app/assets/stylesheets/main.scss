@@ -332,6 +332,18 @@ body {
   }
 }
 
+#flash {
+  text-align: center;
+  margin: 0 auto .5em;
+  clear: both;
+  .notice{
+    padding: 10px;
+    border: thin solid #ff0;
+    background: #ffe;
+    font-weight: bold;
+  }
+}
+
 #registration-form{
   table{
     margin-bottom: 10px;
