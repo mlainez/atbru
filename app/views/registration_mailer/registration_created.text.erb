@@ -1,14 +1,23 @@
 ======== Invoice ========
 
 Name           : <%= @registration.name %>
+
 Company        : <%= @registration.company %>
+
 VAT            : <%= @registration.vat %>
+
 Purchase Order : <%= @registration.purchase_order %>
+
 Address        : <%= @registration.address %>
+
 Zip            : <%= @registration.zip %>
+
 City           : <%= @registration.city %>
+
 Country        : <%= @registration.country %>
+
 Email          : <%= @registration.email %>
+
 Phone          : <%= @registration.phone %>
 
 ====== Participants ======
@@ -16,7 +25,9 @@ Phone          : <%= @registration.phone %>
 <% if @registration.participants %>
   <% @registration.participants.each_with_index do |participant, index| %>
 -- Participant <%= index + 1 %> --
+
 Name           : <%= participant.name %>
+
 Email          : <%= participant.email %>
 
   <% end %>
