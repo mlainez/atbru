@@ -20,7 +20,7 @@
   If your company requires a Purchase Order before paying an invoice, let us know so that we can put its reference number on the invoice. This will help your accounting department to pay the invoice on time.
 
 %h2 Invoice information
-= nested_form_for @registration, :html => {:id => "registration-form"} do |f|
+= nested_form_for @registration, :html => {:id => "registration-form", :honeypot => true} do |f|
   %table
     %tr
       %td

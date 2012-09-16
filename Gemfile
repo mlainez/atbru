@@ -9,6 +9,7 @@ gem 'haml'
 gem 'pg'
 gem 'rails_admin'
 gem 'nested_form'
+gem 'honeypot-captcha'
 
 # Gems used only for assets and not required
 # in production environments by default.
