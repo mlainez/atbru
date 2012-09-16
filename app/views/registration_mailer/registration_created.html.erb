@@ -1,4 +1,4 @@
-========= Invoice ==========
+======== Invoice ========
 
 Name           : <%= @registration.name %>
 Company        : <%= @registration.company %>
@@ -11,4 +11,13 @@ Country        : <%= @registration.country %>
 Email          : <%= @registration.email %>
 Phone          : <%= @registration.phone %>
 
-========= Participants ====
+====== Participants ======
+
+<% if @registration.participants %>
+  <% @registration.participants.each_with_index do |participant, index| %>
+-- Participant <%= index + 1 %> --
+Name           : <%= participant.name %>
+Email          : <%= participant.email %>
+
+  <% end %>
+<% end %>

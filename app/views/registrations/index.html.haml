@@ -1,9 +1,11 @@
 %h2 Tickets
 
 %p
-  Early-bird: 70 € (only 30 tickets)
+  Early-bird:
+  %strong 70 € (only 30 tickets)
   %br
-  Regular: 100 € (50 tickets)
+  Regular:
+  %strong 100 € (50 tickets)
 
 %p
   All stated prices are exclusive of VAT. We will apply the following VAT rates:
@@ -100,28 +102,31 @@
 %h2 Payment by Bank Transfer
 
 %p
-  Agile Systems vzw,
-  %br
-  St Pancratiuslaan 49,
-  %br
-  1933 Sterrebeek, Belgium
-  %br
-  Bank (Belgium): Dexia Sterrebeek
-  %br
-  Mechelsesteenweg 223,
-  %br
-  1933 Sterrebeek,
-  %br
-  Belgium
-  %br
-  IBAN BE48-0682-4365-4327
-  %br
-  BIC GKCCBEBB
+  %strong
+    Agile Systems vzw,
+    %br
+    St Pancratiuslaan 49,
+    %br
+    1933 Sterrebeek, Belgium
+    %br
+    Bank (Belgium): Dexia Sterrebeek
+    %br
+    Mechelsesteenweg 223,
+    %br
+    1933 Sterrebeek,
+    %br
+    Belgium
+    %br
+    IBAN BE48-0682-4365-4327
+    %br
+    BIC GKCCBEBB
 
 %p
   Please mention your invoice number in the comment field of your transfer.
 %h2 Credit card payments
 - if @participant_count <= 30
+  %p
+    %strong Early-bird 70€ TVA excl., hurry up!
   :plain
     <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
     method="post">
@@ -136,6 +141,8 @@
     height="1">
     </form>
 - else
+  %p
+    %strong Regular ticket 100€ TVA excl.
   :plain
     <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
     method="post">
