@@ -1,46 +1,54 @@
 Hi <%= @registration.name %>,
-
+<br/>
+<br/>
 Thank you for your registration to Agile Tour Brussels.
-
+<br/>
+<br/>
 Here is a copy of your registration info:
-
+<br/>
+<br/>
 ======== Invoice ========
-
+<br/>
+<br/>
 Name           : <%= raw @registration.name %>
-
+<br/>
 Company        : <%= raw @registration.company %>
-
+<br/>
 VAT            : <%= raw @registration.vat %>
-
+<br/>
 Purchase Order : <%= raw @registration.purchase_order %>
-
+<br/>
 Address        : <%= raw @registration.address %>
-
+<br/>
 Zip            : <%= raw @registration.zip %>
-
+<br/>
 City           : <%= raw @registration.city %>
-
+<br/>
 Country        : <%= raw @registration.country %>
-
+<br/>
 Email          : <%= raw @registration.email %>
-
+<br/>
 Phone          : <%= raw @registration.phone %>
-
+<br/>
+<br/>
 ====== Participants ======
-
+<br/>
+<br/>
 <% if @registration.participants %>
   <% @registration.participants.each_with_index do |participant, index| %>
 -- Participant <%= index + 1 %> --
-
+<br/>
+<br/>
 Name           : <%= raw participant.name %>
-
+<br/>
 Email          : <%= raw participant.email %>
-
+<br/>
   <% end %>
 <% end %>
-
+<br/>
+<br/>
 We will send you an invoice shortly.
-
+<br/><br/>
 Have a nice day,
-
+<br/><br/>
 The Agile Tour Brussels team.
