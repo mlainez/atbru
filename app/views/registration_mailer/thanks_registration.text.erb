@@ -1,0 +1,46 @@
+Hi <%= @registration.name %>,
+
+Thank you for your registration to Agile Tour Brussels.
+
+Here is a copy of your registration info:
+
+======== Invoice ========
+
+Name           : <%= raw @registration.name %>
+
+Company        : <%= raw @registration.company %>
+
+VAT            : <%= raw @registration.vat %>
+
+Purchase Order : <%= raw @registration.purchase_order %>
+
+Address        : <%= raw @registration.address %>
+
+Zip            : <%= raw @registration.zip %>
+
+City           : <%= raw @registration.city %>
+
+Country        : <%= raw @registration.country %>
+
+Email          : <%= raw @registration.email %>
+
+Phone          : <%= raw @registration.phone %>
+
+====== Participants ======
+
+<% if @registration.participants %>
+  <% @registration.participants.each_with_index do |participant, index| %>
+-- Participant <%= index + 1 %> --
+
+Name           : <%= raw participant.name %>
+
+Email          : <%= raw participant.email %>
+
+  <% end %>
+<% end %>
+
+We will send you an invoice shortly.
+
+Have a nice day,
+
+The Agile Tour Brussels team.
