@@ -38,15 +38,13 @@ Phone          : <%= raw @registration.phone %>
   <% @registration.participants.each_with_index do |participant, index| %>
 -- Participant <%= index + 1 %> --
 <br/>
-<br/>
 Name           : <%= raw participant.name %>
 <br/>
 Email          : <%= raw participant.email %>
 <br/>
+<br/>
   <% end %>
 <% end %>
-<br/>
-<br/>
 We will send you an invoice shortly.
 <br/><br/>
 Have a nice day,

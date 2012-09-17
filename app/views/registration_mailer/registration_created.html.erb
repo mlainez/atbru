@@ -24,10 +24,10 @@ Phone          : <%= raw @registration.phone %>
 <br/>
 ====== Participants ======
 <br/>
+<br/>
 <% if @registration.participants %>
   <% @registration.participants.each_with_index do |participant, index| %>
 -- Participant <%= index + 1 %> --
-<br/>
 <br/>
 Name           : <%= raw participant.name %>
 <br/>
