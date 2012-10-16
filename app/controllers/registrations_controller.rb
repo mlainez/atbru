@@ -6,6 +6,7 @@ class RegistrationsController < ApplicationController
   end
 
   def create
+    @participant_count = Participant.count
     @registration = Registration.new(params[:registration])
     if @registration.save
       RegistrationMailer.registration_created(@registration).deliver

@@ -6,7 +6,11 @@
   %strong SOLD OUT!
   %br
   Regular:
-  %strong 100 € (50 tickets)
+  %strong
+    100 € (only
+    = 80 - @participant_count
+    tickets left)
+#progress-bar
 
 %p
   All stated prices are exclusive of VAT. We will apply a 21% VAT for each ticket.
@@ -194,4 +198,10 @@
   This information is only used to handle the administration of the Agile Tour Brussels conference and to keep you informed about this and future events. In no case will this information be transfered to a third party.
 
 :javascript
+  $(document).ready(function(){
+    $("#progress-bar").progressbar({
+      value: #{80 - @participant_count}
+    })
+  });
+
   $("#registration-form").validate();
