@@ -126,7 +126,7 @@ body {
 
   #location {
     float: left;
-    width: 60%;
+    width: 40%;
     #map {
       height: 240px;
       width: 360px;
@@ -135,9 +135,22 @@ body {
     }
   }
 
+  #sponsors {
+    float: left;
+    width: 30%;
+    img.sponsor-home{
+      width: 80%;
+      border: 2px solid #eee;
+    }
+    img.sponsor-home-no-border{
+      border: none;
+      width: 180px;
+    }
+  }
+
   #organizers {
     float: left;
-    width: 40%;
+    width: 30%;
     img.face {
       height: 60px;
       float: left;
@@ -387,4 +400,15 @@ p{
 
 .hidden{
   display: none;
+}
+
+h3{
+  color: #d96607;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+img.sponsor{
+  width: 300px;
+  border: 2px solid #eee;
 }
