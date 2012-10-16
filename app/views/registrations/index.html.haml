@@ -200,7 +200,7 @@
 :javascript
   $(document).ready(function(){
     $("#progress-bar").progressbar({
-      value: #{80 - @participant_count}
+      value: #{@progress_bar_value}
     })
   });
 
