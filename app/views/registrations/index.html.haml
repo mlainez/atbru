@@ -6,14 +6,23 @@
   %strong SOLD OUT!
   %br
   Regular:
-  %strong
-    100 € (only
-    = 80 - @participant_count
-    tickets left)
+  - if @participant_count < 80
+    %strong
+      100 € (only
+      = 80 - @participant_count
+      tickets left)
+  - else
+    %span.line-through 100 € (only 80 tickets)
+    %strong SOLD OUT!
 #progress-bar
 
 %p
   All stated prices are exclusive of VAT. We will apply a 21% VAT for each ticket.
+
+- if @participant_count == 80
+  #flash
+    %p.notice
+      The event is sold out! Your registration will be put on a waiting list and we will contact you one day prior the event if we have cancellations.
 
 %h2 Purchase orders
 %p
@@ -123,39 +132,40 @@
 
 %p
   Please mention your invoice number in the comment field of your transfer.
-%h2 Credit card payments
-- if @participant_count <= 30
-  %p
-    %strong Early-bird 70€ TVA excl., hurry up!
-  :plain
-    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
-    method="post">
-    <input type="hidden" name="cmd" value="_s-xclick">
-    <input type="hidden" name="hosted_button_id" value="KY3F5DJVRFR4J">
-    <input type="image"
-    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
-    border="0" name="submit" alt="PayPal - The safer, easier way to pay
-    online!">
-    <img alt="" border="0"
-    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
-    height="1">
-    </form>
-- else
-  %p
-    %strong Regular ticket 100€ VAT excl.
-  :plain
-    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
-    method="post">
-    <input type="hidden" name="cmd" value="_s-xclick">
-    <input type="hidden" name="hosted_button_id" value="RZN2F79KPYHBA">
-    <input type="image"
-    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
-    border="0" name="submit" alt="PayPal - The safer, easier way to pay
-    online!">
-    <img alt="" border="0"
-    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
-    height="1">
-    </form>
+- if @participant_count < 80
+  %h2 Credit card payments
+  - if @participant_count <= 30
+    %p
+      %strong Early-bird 70€ TVA excl., hurry up!
+    :plain
+      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
+      method="post">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="KY3F5DJVRFR4J">
+      <input type="image"
+      src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+      border="0" name="submit" alt="PayPal - The safer, easier way to pay
+      online!">
+      <img alt="" border="0"
+      src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
+      height="1">
+      </form>
+  - else
+    %p
+      %strong Regular ticket 100€ VAT excl.
+    :plain
+      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
+      method="post">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="RZN2F79KPYHBA">
+      <input type="image"
+      src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+      border="0" name="submit" alt="PayPal - The safer, easier way to pay
+      online!">
+      <img alt="" border="0"
+      src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
+      height="1">
+      </form>
 %br
 
 %h2 We don't accept cash or cheque payments.
