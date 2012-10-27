@@ -20,11 +20,13 @@
             %li= link_to t("menu.program"), program_url
             %li= link_to t("menu.sponsors"), sponsors_url
             %li= link_to t("menu.details"), details_url
-        #register-box
-          #counter
-            %span.days= days_left
-            = t("register.days_left")
-          .button= link_to t("register.register"), registrations_path
+        - if nil
+          #register-box
+            #counter
+              %span.days
+              =# days_left
+              =# t("register.days_left")
+            .button=# link_to t("register.register"), registrations_path
       #content
         #slideshow
           .slides_container
