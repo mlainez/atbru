@@ -149,8 +149,9 @@ body {
   }
 
   #organizers {
+    margin-left: 20px;
     float: left;
-    width: 30%;
+    width: 26%;
     img.face {
       height: 60px;
       float: left;
@@ -416,4 +417,8 @@ h3{
 img.sponsor{
   width: 300px;
   border: 2px solid #eee;
+}
+
+img.home{
+  width: 390px;
 }
