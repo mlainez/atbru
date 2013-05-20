@@ -105,6 +105,18 @@ body {
       width: 980px;
     }
   }
+  .title{
+    &.big {
+      text-align: center;
+      font-size: 1.6em;
+      margin-top: 2em;
+      margin-bottom: 0.3em;
+    }
+    &.giant {
+      @extend .big;
+      font-size: 2em;
+    }
+  }
   h2 {
     color: #d96607;
     font-size: 1.4em;
@@ -189,13 +201,22 @@ body {
     }
   }
 
-  #speakers-call {
+  .ribbon{
     background: url("cta_bg.png") no-repeat center center;
     text-align: center;
     line-height: 33px;
     font-weight: 600;
     color: #fff;
     font-size: 0.9em;
+  }
+
+  .large.ribbon{
+    @extend .ribbon;
+    background-image: url("cta_bg2.png");
+  }
+
+  #speakers-call {
+    @extend .ribbon;
   }
 
   #speaker-list {
