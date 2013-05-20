@@ -1,0 +1,340 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis:300,400,500,700)
+
+=box-shadow($x, $y, $blur, $color)
+  -moz-box-shadow: $x $y $blur $color
+  box-shadow: $x $y $blur $color
+
+$main_color: #11304a
+
+html, body
+  height: 100%
+
+body
+  background: #f8f8fa
+  color: #333
+  font-size: 0.9em
+  font-family: "Dosis", arial, sans-serif
+  letter-spacing: 0.1em
+
+#wrap
+  width: 980px
+  min-height: 100%
+  height: auto !important
+  height: 100%
+  margin: 0 auto -64px
+
+#header
+  padding: 20px 0
+  height: 84px
+  position: relative
+  h1
+    position: absolute
+  #main-menu
+    font-weight: 700
+    text-align: center
+    line-height: 84px
+    li
+      display: inline-block
+      padding: 0 30px
+      a
+        color: $main-color
+        text-decoration: none
+      a:hover
+        text-decoration: underline
+  #register-box
+    position: absolute
+    right: 0
+    top: 32px
+    background: $main-color
+    color: #fff
+    a
+      color: #fff
+      text-decoration: none
+    #counter
+      position: absolute
+      border-right: 1px solid #fff
+      padding: 10px
+      text-align: center
+      font-size: 0.6em
+      text-transform: uppercase
+      .days
+        font-size: 3.2em
+        font-weight: 600
+        display: block
+    .button
+      font-size: 1.6em
+      margin: 0 0 0 68px
+      line-height: 57px
+      padding: 0 20px
+
+#content
+  padding: 0 0 30px 0
+  #slideshow
+    position: relative
+    background: #eee
+    height: 300px
+    margin: 0 0 20px 0
+    +box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.26))
+    .slides_container
+      height: 300px
+    .caption
+      position: absolute
+      bottom: 0
+      background: #fff
+      color: $main-color
+      font-weight: 500
+      font-size: 1.2em
+      text-align: center
+      padding: 10px 0
+      width: 980px
+  .title
+    &.big
+      text-align: center
+      font-size: 1.6em
+      margin-top: 2em
+      margin-bottom: 0.3em
+    &.giant
+      @extend .big
+      font-size: 2em
+  h2
+    color: #d96607
+    font-size: 1.4em
+    font-weight: 500
+    margin: 0 0 15px 0
+  p
+    line-height: 1.4
+    margin: 0 0 20px 0
+  ul
+    margin: 0 0 20px 20px
+    li
+      margin: 0 0 15px 20px
+      list-style: disc
+  #location
+    float: left
+    width: 40%
+    #map
+      height: 240px
+      width: 360px
+      border: 4px solid $main-color
+      margin: 0 0 20px
+  #sponsors
+    float: left
+    width: 30%
+    img.sponsor-home
+      width: 80%
+      border: 2px solid #eee
+    img.sponsor-home-no-border
+      border: none
+      width: 180px
+  #organizers
+    margin-left: 20px
+    float: left
+    width: 26%
+    img.face
+      height: 60px
+      float: left
+      margin-right: 15px
+    p
+      a.linkedin, a.twitter
+        text-decoration: none
+        color: #000
+      a.linkedin:hover, a.twitter:hover
+        color: #aaa
+  #speakers
+    ol
+      margin: 0 0 20px
+      li
+        display: inline-block
+        text-align: center
+        margin: 0 10px
+        img
+          width: 128px
+          height: 128px
+        .name
+          font-weight: 500
+          color: $main-color
+          text-transform: uppercase
+          padding: 5px 0 0 0
+  .ribbon
+    background: url("cta_bg.png") no-repeat center center
+    text-align: center
+    line-height: 33px
+    font-weight: 600
+    color: #fff
+    font-size: 0.9em
+  .large.ribbon
+    @extend .ribbon
+    background-image: url("cta_bg2.png")
+  #speakers-call
+    @extend .ribbon
+  #speaker-list
+    border-left: 4px solid $main-color
+    margin: 0 0 0 35px
+    li
+      list-style: none
+      position: relative
+      padding: 0 0 10px 0
+      .bullet
+        position: absolute
+        top: 0
+        left: -31px
+        height: 18px
+        width: 18px
+        background: url("bullet.png")
+      .name
+        font-weight: 500
+        color: $main-color
+        text-transform: uppercase
+        padding: 0 0 5px 0
+      .bio
+        position: relative
+        min-height: 128px
+        img
+          position: absolute
+          width: 128px
+          height: 128px
+          float: left
+        p
+          margin: 0 0 0 148px
+          color: #212121
+          width: 738px
+  .top-link
+    position: relative
+    top: -15px
+    left: 11px
+    background: $main-color
+    color: #fff
+    text-align: center
+    width: 50px
+    padding: 3px 0
+    font-size: 0.8em
+    border-radius: 9px
+    -moz-border-radius: 9px
+    a
+      color: #fff
+      text-decoration: none
+
+.push
+  height: 64px
+
+#footer
+  border-top: 4px solid #11304a
+  background: url("footer_bg.png") repeat-x
+  font-weight: 500
+  color: #fff
+  padding: 23px
+  clear: both
+  .wrap
+    position: relative
+    width: 980px
+    margin: 0 auto
+    .copyright
+      position: absolute
+    #footer-nav
+      text-align: right
+      li
+        display: inline-block
+        margin: 0 0 0 20px
+        a
+          color: #fff
+          text-decoration: none
+        a:hover
+          color: $main-color
+
+#program
+  table
+    width: 90%
+    border-top: 1px solid #e5eff8
+    border-right: 1px solid #e5eff8
+    margin: 1em auto
+    border-collapse: collapse
+    td.small, th.small
+      width: 14%
+      font-weight: bold
+      padding: .3em 1em
+      background-color: #eee
+    th
+      background-color: #eee
+    a
+      text-decoration: none
+      color: black
+    a:hover
+      color: #888
+    td.food
+      background-color: #ddd
+    td.all
+      background-color: #ddd
+    th
+      font-weight: bold
+      color: #11304A
+      border-bottom: 1px solid #e5eff8
+      border-left: 1px solid #e5eff8
+      padding: .3em 1em
+      text-align: center
+      width: 20%
+    td
+      border-bottom: 1px solid #e5eff8
+      border-left: 1px solid #e5eff8
+      padding: .6em 1.5em
+      text-align: center
+      width: 20%
+      .name
+        margin-top: 10px
+    tr
+      .break
+
+#flash
+  text-align: center
+  margin: 0 auto .5em
+  clear: both
+  .notice
+    padding: 10px
+    border: thin solid #ff0
+    background: #ffe
+    font-weight: bold
+
+#registration-form
+  table
+    margin-bottom: 10px
+    td
+      padding: 10px 100px 5px 0px
+  strong
+    font-weight: bold
+  label.error
+    color: #c00
+    display: block
+    font-weight: bold
+  input[type="text"]
+    width: 300px
+  input
+    line-height: 1.4em
+    font-size: 1.1em
+  input.medium
+    width: 200px
+  input.small
+    width: 100px
+
+#progress-bar
+  width: 50%
+  margin-bottom: 20px
+
+p
+  strong
+    font-weight: bold
+  .line-through
+    text-decoration: line-through
+
+.hidden
+  display: none
+
+h3
+  color: #d96607
+  font-size: 1em
+  font-weight: 400
+
+img.sponsor
+  width: 300px
+  border: 2px solid #eee
+
+img.home
+  width: 390px
