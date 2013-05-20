@@ -46,60 +46,60 @@
     %br/
     Thanks in advance for your support!
 
+.year_2012
+
+  %h1.big.title Agile Tour Brussels 2012
+  .ribbon October 26 2012
+
+  %section#intro
+    %h2 Thanks all for coming!
+    %p
+      We gathered almost 100 people together for this first edition of the Agile Tour Brussels. Thank you all for coming and making this event so special. We will not forget the great atmosphere and the happy faces!
 
 
-%h1.big.title Agile Tour Brussels 2012
-.ribbon October 26 2012
+  %section#location
+    %h2 The participants
+    %p= image_tag("beer.jpg", :class => "home")
 
-%section#intro
-  %h2 Thanks all for coming!
-  %p
-    We gathered almost 100 people together for this first edition of the Agile Tour Brussels. Thank you all for coming and making this event so special. We will not forget the great atmosphere and the happy faces!
+  %section#organizers
+    %h2 The crew
+    = link_to image_tag("brunosbille.png", :class => "face"), "http://be.linkedin.com/in/brunosbille"
+    %p
+      %strong= link_to "Bruno Sbille", "http://be.linkedin.com/in/brunosbille", :class => "linkedin"
+      %br
+      = mail_to "bruno.sbille@gmail.com", "bruno.sbille@gmail.com"
+      %br
+      = link_to "@BrunoSbille", "http://twitter.com/brunosbille", :class => "twitter"
 
+    = link_to image_tag("mlainez.png", :class => "face"), "http://be.linkedin.com/in/marclainez"
+    %p
+      %strong= link_to "Marc Lainez", "http://be.linkedin.com/in/marclainez", :class => "linkedin"
+      %br
+      = mail_to "ml@theotherguys.be", "ml@theotherguys.be"
+      %br
+      = link_to "@mlainez", "http://twitter.com/mlainez", :class => "twitter"
 
-%section#location
-  %h2 The participants
-  %p= image_tag("beer.jpg", :class => "home")
+    = link_to image_tag("jbpros.png", :class => "face"), "http://be.linkedin.com/in/jbpros"
+    %p
+      %strong= link_to "Julien Biezemans", "http://be.linkedin.com/in/jbpros", :class => "linkedin"
+      %br
+      = mail_to "jb@jbpros.com", "jb@jbpros.com"
+      %br
+      = link_to "@jbpros", "http://twitter.com/jbpros", :class => "twitter"
 
-%section#organizers
-  %h2 The crew
-  = link_to image_tag("brunosbille.png", :class => "face"), "http://be.linkedin.com/in/brunosbille"
-  %p
-    %strong= link_to "Bruno Sbille", "http://be.linkedin.com/in/brunosbille", :class => "linkedin"
-    %br
-    = mail_to "bruno.sbille@gmail.com", "bruno.sbille@gmail.com"
-    %br
-    = link_to "@BrunoSbille", "http://twitter.com/brunosbille", :class => "twitter"
+    = link_to image_tag("romaingweb.jpg", :class => "face"), "http://be.linkedin.com/in/romaingweb"
+    %p
+      %strong= link_to "Romain Gérard", "http://be.linkedin.com/in/romaingweb", :class => "linkedin"
+      %br
+      = mail_to "romaingweb@gmail.com", "romaingweb@gmail.com"
+      %br
+      = link_to "@romaingweb", "http://twitter.com/romaingweb", :class => "twitter"
 
-  = link_to image_tag("mlainez.png", :class => "face"), "http://be.linkedin.com/in/marclainez"
-  %p
-    %strong= link_to "Marc Lainez", "http://be.linkedin.com/in/marclainez", :class => "linkedin"
-    %br
-    = mail_to "ml@theotherguys.be", "ml@theotherguys.be"
-    %br
-    = link_to "@mlainez", "http://twitter.com/mlainez", :class => "twitter"
-
-  = link_to image_tag("jbpros.png", :class => "face"), "http://be.linkedin.com/in/jbpros"
-  %p
-    %strong= link_to "Julien Biezemans", "http://be.linkedin.com/in/jbpros", :class => "linkedin"
-    %br
-    = mail_to "jb@jbpros.com", "jb@jbpros.com"
-    %br
-    = link_to "@jbpros", "http://twitter.com/jbpros", :class => "twitter"
-
-  = link_to image_tag("romaingweb.jpg", :class => "face"), "http://be.linkedin.com/in/romaingweb"
-  %p
-    %strong= link_to "Romain Gérard", "http://be.linkedin.com/in/romaingweb", :class => "linkedin"
-    %br
-    = mail_to "romaingweb@gmail.com", "romaingweb@gmail.com"
-    %br
-    = link_to "@romaingweb", "http://twitter.com/romaingweb", :class => "twitter"
-
-%section#sponsors
-  %h2 Supporting communities
-  %p
-    = link_to image_tag("scrum_alliance.jpg", :class => "sponsor-home"), sponsors_path(:anchor => "scrum-alliance")
-  %p
-    = link_to image_tag("agile_systems.png", :class => "sponsor-home-no-border"), sponsors_path(:anchor => "agile-systems")
-  %p
-    = link_to image_tag("xp_days.png", :class => "sponsor-home-no-border"), sponsors_path(:anchor => "xp-days")
+  %section#sponsors
+    %h2 Supporting communities
+    %p
+      = link_to image_tag("scrum_alliance.jpg", :class => "sponsor-home"), sponsors_path(:anchor => "scrum-alliance")
+    %p
+      = link_to image_tag("agile_systems.png", :class => "sponsor-home-no-border"), sponsors_path(:anchor => "agile-systems")
+    %p
+      = link_to image_tag("xp_days.png", :class => "sponsor-home-no-border"), sponsors_path(:anchor => "xp-days")
