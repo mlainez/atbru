@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def days_left
-    @days_left = (Date.new(2012, 10, 26) - Date.today).to_i
+    @days_left = (Date.new(2013, 9, 27) - Date.today).to_i
   end
 end

@@ -1,4 +1,12 @@
 !!!
+- content_for :submenu do
+  - if params[:year] == '2012'
+    %ul.edition_2012
+      %li= link_to t("menu.speakers"     ), speakers_url(      year: 2012 )
+      %li= link_to t("menu.program"      ), program_url(       year: 2012 )
+      %li= link_to t("menu.sponsors"     ), sponsors_url(      year: 2012 )
+      %li= link_to t("menu.presentations"), presentations_url( year: 2012 )
+
 %html
   %head
     %title AgileTour Brussels
@@ -20,6 +28,10 @@
             %li= link_to t("menu.program"), program_url
             %li= link_to t("menu.sponsors"), sponsors_url
             %li= link_to t("menu.presentations"), presentations_url
+            %li.edition_2012= link_to t("menu.edition_2012"), speakers_url( year: 2012 )
+        - if content = yield(:submenu)
+          %nav#sub-menu
+            = content
         - if nil
           #register-box
             #counter
@@ -27,6 +39,7 @@
               =# days_left
               =# t("register.days_left")
             .button=# link_to t("register.register"), registrations_path
+
       #content
         #slideshow
           .slides_container

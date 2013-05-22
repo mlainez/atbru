@@ -4,10 +4,17 @@
   -moz-box-shadow: $x $y $blur $color
   box-shadow: $x $y $blur $color
 
+=clearfix
+  overflow: hidden
+
+
 $main_color:  #11304a
 $orange:      #d96607
 $logo_green:  #07B300
 $green:       darken($logo_green, 5%)
+
+.center
+  text-align: center
 
 html, body
   height: 100%
@@ -27,24 +34,53 @@ body
   margin: 0 auto -64px
 
 #header
+  +clearfix
   padding: 20px 0
-  height: 84px
+  height: 85px
   position: relative
   h1
     position: absolute
-  #main-menu
+
+  #main-menu,
+  #sub-menu
     font-weight: 700
-    text-align: center
-    line-height: 84px
-    margin-left: 80px
+    text-align: left
+    line-height: 40px
+    margin-left: 210px
     li
       display: inline-block
-      padding: 0 30px
+      padding: 0 20px
       a
         color: $main-color
         text-decoration: none
       a:hover
         text-decoration: underline
+    .edition_2012
+      a
+        font-size: 12px
+        &:link, &,hover, &:hover, &:visited
+          color: $orange
+
+
+  #main-menu
+    margin-top: 24px
+    li.edition_2012
+      float: right
+
+  #sub-menu
+    font-size: 12px
+    clear: both
+    float: right
+    li
+      display: inline-block
+      padding-left: 10px
+    a
+      font-size: 12px
+      &:link, &,hover, &:hover, &:visited
+        color: $orange
+
+
+
   #register-box
     position: absolute
     right: 0
@@ -100,12 +136,16 @@ body
     &.giant
       @extend .big
       font-size: 2em
+  .edition_2012
+    .big.title,
+    .giant.title
+      color: $orange
   h2
     color: $green
     font-size: 1.4em
     font-weight: 500
     margin: 0 0 15px 0
-  .year_2012 h2
+  .edition_2012 h2
     color: $orange
   p
     line-height: 1.4
@@ -337,6 +377,9 @@ h3
   color: $green
   font-size: 1em
   font-weight: 400
+  .edition_2012 &
+    color: $orange
+
 
 img.sponsor
   width: 300px

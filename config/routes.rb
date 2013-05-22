@@ -54,12 +54,14 @@ Atbru::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
 
-  resources :speakers
-  resources :sponsors
-  resources :details
-  resources :presentations
-  resources :registrations
-  resource :program, :controller => "Program"
+  scope '(:year)' do
+    resources :speakers
+    resources :sponsors
+    resources :details
+    resources :presentations
+    resources :registrations
+    resource :program, :controller => "Program"
+  end
 
   root :to => 'welcome#index'
 
