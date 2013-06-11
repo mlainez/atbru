@@ -28,7 +28,7 @@
             /%li=# link_to t("menu.program"), program_url
             %li= link_to t("menu.sponsors"), sponsors_url
             /%li=# link_to t("menu.presentations"), presentations_url
-            %li.edition_2012= link_to t("menu.edition_2012"), speakers_url( year: 2012 )
+            %li.edition_2012= link_to "Agile Tour Brussels 2012", speakers_url( year: 2012 )
         - if content = yield(:submenu)
           %nav#sub-menu
             = content
@@ -40,12 +40,7 @@
           .button=# link_to t("register.register"), registrations_path
 
       #content
-        #slideshow
-          .slides_container
-            %div= image_tag "retro.jpg"
-            %div= image_tag "tiago.jpg"
-            %div= image_tag "lego_game.jpg"
-            %div= image_tag "atbru.jpg"
+        = yield :carousel
         #flash
           - if flash[:notice]
             %p.notice

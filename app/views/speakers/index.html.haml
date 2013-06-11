@@ -1,5 +1,10 @@
-%h1.giant.title Want to be a speaker ?
-%p.center= link_to "Propose a session !", root_path
+- content_for :carousel do
+  #slideshow
+    .slides_container
+      %div= image_tag "tiago.jpg"
+
+%h1.giant.title Want to be a speaker at Agile Tour Brussels?
+%p.center= link_to "Propose a session!", "http://at2013.agiletour.org/fr/callForSpeaker.html"
 
 
 %h1.big.title Last year's speakers
