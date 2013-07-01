@@ -5,6 +5,7 @@ en:
   menu:
     home: "Home"
     speakers: "Speakers"
+    details: "Practical details"
   register:
     days_left: "Days left"
     register: "Register"

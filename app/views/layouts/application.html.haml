@@ -27,6 +27,7 @@
             %li= link_to t("menu.speakers"), speakers_url
             /%li=# link_to t("menu.program"), program_url
             %li= link_to t("menu.sponsors"), sponsors_url
+            %li= link_to t("menu.details"), details_url
             /%li=# link_to t("menu.presentations"), presentations_url
             %li.edition_2012= link_to "Agile Tour Brussels 2012", speakers_url( year: 2012 )
         - if content = yield(:submenu)
