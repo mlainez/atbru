@@ -1,4 +1,214 @@
-%h1.giant.title Stay tuned !
+%h1.giant.title Agile Tour Brussels 2013
+.large.ribbon Program
 
-%h1.big.title Last year's program
-%p.center= link_to "Agile Tour 2012 program", program_path( year: 2012)
+%br/
+%br/
+
+#program
+  %table
+    %thead
+      %tr
+        %th.small
+        %th
+          Conference room 1
+        %th
+          Workshop room 1
+        %th
+          Conference room 2
+        %th
+          Workshop room 2
+        %th
+          Conference room 3
+    %tbody
+      %tr
+        %td.small 
+          09h00 - 10h00
+        %td
+          Introduction
+        %td
+        %td
+        %td
+        %td
+      
+      %tr
+        %td.small 
+          10h00 - 11h00
+        %td
+          = link_to "Why Agile ?", presentations_path(:anchor => "tiago-garcez")
+          .name
+            = link_to "Tiago Garcez", speakers_path(:anchor => "tiago-garcez")          
+          
+        %td
+          = link_to "A War Story of the Rise and Fall of an \"Agile\" Company", presentations_path(:anchor => "jan-de-baere")
+          .name
+            = link_to "Jan De Baere", speakers_path(:anchor => "jan-de-baere")
+          
+        %td
+          = link_to "The Road to Lean Success", presentations_path(:anchor => "eddy-pauwels")
+          .name
+            = link_to "Eddy Pauwels", speakers_path(:anchor => "eddy-pauwels")
+          
+        %td
+          = link_to "My Product is a James Bond Movie!", presentations_path(:anchor => "pierre-e-neis")
+          .name
+            = link_to "Pierre E. Neis", speakers_path(:anchor => "pierre-e-neis")
+          
+        %td
+          = link_to "The Sound of Silence", presentations_path(:anchor => "luc-taesch")
+          .name
+            = link_to "Luc Taesch", speakers_path(:anchor => "luc-taesch")
+          
+      
+      %tr
+        %td.small 
+          11h00 - 11h30
+        %td{:rowspan => 5}
+          Break
+      
+      %tr
+        %td.small 
+          11h30 - 12h30
+        %td
+          = link_to "Our Agile Approach to Game Development", presentations_path(:anchor => "laurent-grumiaux")
+          .name
+            = link_to "Laurent Grumiaux", speakers_path(:anchor => "laurent-grumiaux")
+          
+        %td
+          = link_to "Cynefin Lego Game", presentations_path(:anchor => "maurizio-pedriale")
+          .name
+            = link_to "Maurizio Pedriale", speakers_path(:anchor => "maurizio-pedriale")
+          
+        %td
+          = link_to "Lean Startup for Developers: You Can Do It Too!", presentations_path(:anchor => "sebastien-arbogast")
+          .name
+            = link_to "Sébastien Arbogast", speakers_path(:anchor => "sebastien-arbogast")
+          
+        %td
+          = link_to "Everything you wanted to know about PairProgramming, but where afraid to ask....", presentations_path(:anchor => "yves-hanoulle")
+          .name
+            = link_to "Yves Hanoulle", speakers_path(:anchor => "yves-hanoulle")
+          
+        %td
+          = link_to "7 types of feedback that helped make GOV.UK a success", presentations_path(:anchor => "jake-benilov")
+          .name
+            = link_to "Jake Benilov", speakers_path(:anchor => "jake-benilov")
+          
+      
+      %tr
+        %td.small 
+          12h30 - 13h30
+        %td{:rowspan => 5}
+          Lunch
+      
+      %tr
+        %td.small{:rowspan => 2}
+          13h30 - 14h30
+        %td{:rowspan => 2}
+          = link_to "The Agile and Open Source Way", presentations_path(:anchor => "alexis-monville")
+          .name
+            = link_to "Alexis Monville", speakers_path(:anchor => "alexis-monville")
+          
+        %td{:rowspan => 2}
+          = link_to "Perfect Problem Breakthrough", presentations_path(:anchor => "jurgen-de-smet")
+          .name
+            = link_to "Jurgen De Smet", speakers_path(:anchor => "jurgen-de-smet")
+          
+        %td{:rowspan => 2}
+          = link_to "4 étapes pour co-créer le bon produit, parlons Lean Design", presentations_path(:anchor => "carbonnaux-revol-gouy")
+          .name
+            = link_to "Carbonnaux, Revol, Gouy", speakers_path(:anchor => "carbonnaux-revol-gouy")
+          
+        %td
+          = link_to "Agile Meth. For Research", presentations_path(:anchor => "joanne-ho")
+          .name
+            = link_to "Joanne Ho", speakers_path(:anchor => "joanne-ho")
+          
+        %td
+          = link_to "1+9 visual management tools", presentations_path(:anchor => "damien-thouvenin")
+          .name
+            = link_to "Damien Thouvenin", speakers_path(:anchor => "damien-thouvenin")
+          
+      
+      %tr
+        %td
+          = link_to "SCRUM explained to children", presentations_path(:anchor => "lahcen-afif")
+          .name
+            = link_to "Lahcen Afif", speakers_path(:anchor => "lahcen-afif")
+          
+        %td
+      
+      %tr
+        %td.small 
+          14h30 - 15h00
+        %td{:rowspan => 5}
+          Break
+      
+      %tr
+        %td.small 
+          15h00 - 16h00
+        %td
+          = link_to "Real Options: learn when and how (not) to decide", presentations_path(:anchor => "pascal-van-cauwenberghe")
+          .name
+            = link_to "Pascal Van Cauwenberghe", speakers_path(:anchor => "pascal-van-cauwenberghe")
+          
+        %td
+          = link_to "Easy to use correctly and hard to use incorrectly", presentations_path(:anchor => "christophe-addinquy")
+          .name
+            = link_to "Christophe Addinquy", speakers_path(:anchor => "christophe-addinquy")
+          
+        %td
+          = link_to "Applying Lean Thinking to software development", presentations_path(:anchor => "steven-peeters")
+          .name
+            = link_to "Steven Peeters", speakers_path(:anchor => "steven-peeters")
+          
+        %td
+          = link_to "Kickstart your Product Backlog with Innovation Games", presentations_path(:anchor => "frederic-vandaele")
+          .name
+            = link_to "Frederic Vandaele", speakers_path(:anchor => "frederic-vandaele")
+          
+        %td
+          = link_to "Managing without authority : lessons learnt as a dungeon master", presentations_path(:anchor => "guillaume-duquesnay")
+          .name
+            = link_to "Guillaume Duquesnay", speakers_path(:anchor => "guillaume-duquesnay")
+          
+      
+      %tr
+        %td.small 
+          16h00 - 16h15
+        %td{:rowspan => 5}
+          Break
+      
+      %tr
+        %td.small 
+          16h15 - 17h15
+        %td
+          = link_to "Lessons learned from scaling Agile to distributed, offshore teams", presentations_path(:anchor => "stephane-rondal")
+          .name
+            = link_to "Stephane Rondal", speakers_path(:anchor => "stephane-rondal")
+          
+        %td
+          = link_to "Event Driven Architecture in practice", presentations_path(:anchor => "domenico-musto")
+          .name
+            = link_to "Domenico Musto", speakers_path(:anchor => "domenico-musto")
+          
+        %td
+          = link_to "The scrum board mistery files: To post-it or not to post-it", presentations_path(:anchor => "peter-duelen")
+          .name
+            = link_to "Peter Duelen", speakers_path(:anchor => "peter-duelen")
+          
+        %td
+        %td
+          = link_to "Agility: the scientific definition of how to be(come) Agile", presentations_path(:anchor => "")
+          .name
+            = link_to "", speakers_path(:anchor => "")
+          
+      
+      %tr
+        %td.small 
+          17h15 - 18h00
+        %td
+          Closing
+        %td
+        %td
+        %td
+        %td
