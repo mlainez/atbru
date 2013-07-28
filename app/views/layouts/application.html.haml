@@ -20,25 +20,20 @@
   %body
     #wrap
       %header#header
-        %h1= image_tag "logo.png", :alt => "AgileTour Brussels 2012"
+        %h1= link_to image_tag("logo.png", :alt => "AgileTour Brussels 2012"), "/"
         %nav#main-menu
           %ul
             %li= link_to t("menu.home"), root_url
             %li= link_to t("menu.speakers"), speakers_url
             %li= link_to t("menu.program"), program_url
             %li= link_to t("menu.sponsors"), sponsors_url
-            %li= link_to t("menu.details"), details_url
             /%li=# link_to t("menu.presentations"), presentations_url
-            %li.edition_2012= link_to "Agile Tour Brussels 2012", speakers_url( year: 2012 )
-        - if content = yield(:submenu)
-          %nav#sub-menu
-            = content
         #register-box
           #counter
             %span.days
-            = days_left
+              = days_left
             = t("register.days_left")
-          .button=# link_to t("register.register"), registrations_path
+          .button= link_to t("register.register"), "http://register.agilesystems.org/"
 
       #content
         = yield :carousel
