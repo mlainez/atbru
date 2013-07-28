@@ -16,11 +16,11 @@
   };
   var map = new google.maps.Map(document.getElementById("map"), myOptions);
   var contentString = '<div>'+
-    'ICAB nv | Site Arsenal' +
+    'EPHEC Brussels' +
     '<br />'+
-    'Rue des Pères blancs 4'+
+    'Avenue Konrad Adenauer 3'+
     '<br />'+
-    '1040 Bruxelles'+
+    '1200 Woluwe-Saint-Lambert'+
     '</div>';
 
   var infowindow = new google.maps.InfoWindow({
@@ -30,7 +30,7 @@
   var marker = new google.maps.Marker({
     position: new google.maps.LatLng(50.8267908, 4.4002883),
     map: map,
-    title:"ICAB Brussels"
+    title:"EPHEC Brussels"
   });
 
   infowindow.open(map,marker);
