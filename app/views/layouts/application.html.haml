@@ -25,7 +25,7 @@
           %ul
             %li= link_to t("menu.home"), root_url
             %li= link_to t("menu.speakers"), speakers_url
-            /%li=# link_to t("menu.program"), program_url
+            %li= link_to t("menu.program"), program_url
             %li= link_to t("menu.sponsors"), sponsors_url
             %li= link_to t("menu.details"), details_url
             /%li=# link_to t("menu.presentations"), presentations_url
@@ -58,8 +58,9 @@
           %ul
             %li= link_to t("menu.home"), root_url
             %li= link_to t("menu.speakers"), speakers_url
-            /%li=# link_to t("menu.program"), program_url
+            %li= link_to t("menu.program"), program_url
             %li= link_to t("menu.sponsors"), sponsors_url
+            %li= link_to t("menu.details"), details_url
             /%li=# link_to t("menu.presentations"), presentations_url
 
 = render "shared/map"
