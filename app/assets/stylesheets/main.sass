@@ -141,12 +141,19 @@ body
     .giant.title
       color: $orange
   h2
-    color: $green
+    color: darken($green, 5%)
     font-size: 1.4em
     font-weight: 500
     margin: 0 0 15px 0
   .edition_2012 h2
     color: $orange
+  h3
+    color: darken( adjust-hue($green, -90), 5%)
+    font-size: 1.2em
+    font-weight: 400
+    .edition_2012 &
+      color: $orange
+
   p
     line-height: 1.4
     margin: 0 0 20px 0
@@ -372,12 +379,6 @@ p
 .hidden
   display: none
 
-h3
-  color: $green
-  font-size: 1em
-  font-weight: 400
-  .edition_2012 &
-    color: $orange
 
 
 img.sponsor
