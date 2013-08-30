@@ -6,6 +6,7 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'haml'
+gem 'maruku'
 gem 'pg'
 gem 'rails_admin'
 gem 'nested_form'
