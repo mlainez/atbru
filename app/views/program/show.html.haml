@@ -8,17 +8,35 @@
 
 #program
 
-
-  %h2 Beginner-friendly path
+  %h2 Attendees levels and suggested paths
   %p
-    If you are new to Agile, we recommend you to choose between sessions marked as beginner-friendly, with the label #{label :beginner}
+    These path suggestions are for your information only.
+    %br/
+    This is one of the many ways to organise your day, with no obligation to follow particular sessions.
+  %p
+    You can choose your sessions as you go too.
+    %br/
+    Having discussions with participants,
+    speakers and organisers during the breaks can help you identify the subjects you might be interested in.
+  %p
+    Let yourself be open to your agenda changes and surprises !
+
+  %h3 Beginner-friendly path
+  %p Beginner-friendly  workshops and talks are labeled with #{label :beginner}
+  %p
+    If you are new to Agile, we recommend you to choose between sessions marked as beginner-friendly.
     %br/
     Sessions marked with this label don't require any special prerequisites in order to be understood and fully enjoyed.
-  :markdown
-    The beginner-friendly path suggestions are for your information only. This is one of the many ways to organise your day, with no obligation to follow particular sessions.
 
-    You can choose your sessions as you go too. Having discussions with participants, speakers and organisers during the breaks can help you identify the subjects you might be interested in.
-    Let yourself be open to your agenda changes and surprises !
+
+  %h3 Practitioner's path
+  %p Practitioner's workshops and talks are labeled with #{label :practitioner}
+  %p The talks and workshops in this session are targeted for people who are familiar with agile methods and approaches.
+
+  %h3 Expert's path
+  %p Experts workshops and talks are labeled with #{label :expert}
+  %p In these talks and workshops, the basics won't be explained. The presenter assumes that you are well-versed in agile and will present advanced topics.
+
 
   %br/
 
@@ -94,6 +112,7 @@
             = link_to "Our Agile Approach to Game Development", presentations_path(:anchor => "laurent-grumiaux")
           .name
             = link_to "Laurent Grumiaux", speakers_path(:anchor => "laurent-grumiaux")
+          = labels :practitioner
 
         %td
           .presentation-title
@@ -101,6 +120,7 @@
           .name
             = link_to "Maurizio Pedriale", speakers_path(:anchor => "maurizio-pedriale")
             = link_to "& Alan Hortz", speakers_path(:anchor => "alan-hortz")
+          = labels :practitioner
 
         %td
           .presentation-title
@@ -135,6 +155,7 @@
             = link_to "The Agile and Open Source Way", presentations_path(:anchor => "alexis-monville")
           .name
             = link_to "Alexis Monville", speakers_path(:anchor => "alexis-monville")
+          = labels :practitioner
 
         %td{ rowspan: 2 }
           .presentation-title
