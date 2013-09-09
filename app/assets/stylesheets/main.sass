@@ -1,7 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Dosis:300,400,500,700)
 @import labels
 
-
+ol
+  list-style-type: decimal
 
 =box-shadow($x, $y, $blur, $color)
   -moz-box-shadow: $x $y $blur $color
@@ -9,7 +10,6 @@
 
 =clearfix
   overflow: hidden
-
 
 $main_color:  #11304a
 $orange:      #d96607
@@ -166,9 +166,11 @@ body
     margin: 0 0 20px 0
   ul
     margin: 0 0 20px 20px
-    li
-      margin: 0 0 15px 20px
+    > li
       list-style: disc
+    li
+      margin: 0 0 10px 20px
+
   #location
     width: 40%
     #map
@@ -229,7 +231,7 @@ body
   #speaker-list
     border-left: 4px solid $main-color
     margin: 0 0 0 35px
-    li
+    > li
       list-style: none
       position: relative
       padding: 0 0 10px 0
