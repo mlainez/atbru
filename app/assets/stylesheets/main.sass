@@ -1,4 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Dosis:300,400,500,700)
+@import labels
+
+
 
 =box-shadow($x, $y, $blur, $color)
   -moz-box-shadow: $x $y $blur $color
@@ -299,45 +302,68 @@ body
 
 #program
   table
-    width: 90%
-    border-top: 1px solid #e5eff8
-    border-right: 1px solid #e5eff8
+    border: 10px solid white
     margin: 1em auto
-    border-collapse: collapse
+    background: white
+    border-radius: 50px
+    tr
+      border: 5px solid white
     td.small, th.small
       width: 14%
       font-weight: bold
-      padding: .3em 1em
+      padding: .3em .5em
       background-color: #eee
+      color: #888
     th
       background-color: #eee
     a
       text-decoration: none
-      color: black
-    a:hover
-      color: #888
+      color: #666
+      &:hover
+        color: black
     td.food
-      background-color: #ddd
-    td.all
-      background-color: #ddd
+      background-color: #eee
+      font-weight: bold
+      color: #444
     th
       font-weight: bold
       color: #11304A
       border-bottom: 1px solid #e5eff8
       border-left: 1px solid #e5eff8
-      padding: .3em 1em
+      padding:  1em .2em
       text-align: center
       width: 20%
     td
+
       border-bottom: 1px solid #e5eff8
       border-left: 1px solid #e5eff8
-      padding: .6em 1.5em
+      padding: 1em .5em
       text-align: center
       width: 20%
       .name
         margin-top: 10px
     tr
-      .break
+    .labels
+      margin-top: 10px
+      text-align: center
+      font-size: 90%
+    .presentation-title
+      // font-weight: bold
+      font-size: 110%
+      line-height: 1.4
+      a
+        background: darken(white, 3%)
+        display: block
+        padding: 5px
+        border-radius: 10px
+        color: darken( adjust-hue($green, -90), 15%)
+        min-height: 5.5em
+        &:hover
+          color: white
+          background: mix( #52B1DD, #11304A, 80% )
+
+.label-beginner
+  @extend .label-green
 
 #flash
   text-align: center
