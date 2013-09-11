@@ -23,7 +23,7 @@ module LabelsHelper
     labels = Array(labels)
     labels.map!{ |l| label l }
     content_tag :div, class: [ :labels ] do
-      labels.join.html_safe
+      labels.join('<br />').html_safe
     end
   end
 end

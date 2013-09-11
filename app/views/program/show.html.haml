@@ -37,6 +37,11 @@
   %p Experts workshops and talks are labeled with #{label :expert}
   %p In these talks and workshops, the basics won't be explained. The presenter assumes that you are well-versed in agile and will present advanced topics.
 
+  %h2 Session types
+  %p During the conference 2 type of sessions are proposed:
+  %ul
+    %li Talks : Presenter is speaking for most of the time (often from a slide deck), with audience interaction. <br /> They are marked with: #{ label :talk }
+    %li Workshops : Primarily focused on hands-on participation with the audience. <br /> They are marked with: #{ label :workshop }
 
   %br/
 
@@ -83,6 +88,7 @@
             = link_to "The Road to Lean Success", presentations_path(:anchor => "eddy-pauwels")
           .name
             = link_to "Eddy Pauwels", speakers_path(:anchor => "eddy-pauwels")
+          = labels :beginner
 
         %td
           .presentation-title
@@ -120,7 +126,7 @@
           .name
             = link_to "Maurizio Pedriale", speakers_path(:anchor => "maurizio-pedriale")
             = link_to "& Alan Hortz", speakers_path(:anchor => "alan-hortz")
-          = labels :practitioner
+          = labels :practitioner, :workshop
 
         %td
           .presentation-title
@@ -164,6 +170,7 @@
             = link_to "Jurgen De Smet", speakers_path(:anchor => "jurgen-de-smet")
             %br/
             = link_to "& Erik Talboom", speakers_path(:anchor => "erik-talboom")
+          =labels :workshop
 
         %td{ rowspan: 2 }
           .presentation-title
@@ -213,7 +220,7 @@
             = link_to "Easy to use correctly and hard to use incorrectly", presentations_path(:anchor => "christophe-addinquy")
           .name
             = link_to "Christophe Addinquy", speakers_path(:anchor => "christophe-addinquy")
-          = labels :beginner
+          = labels :beginner, :workshop
 
         %td
           .presentation-title
@@ -249,12 +256,14 @@
             = link_to "Lessons learned from scaling Agile to distributed, offshore teams", presentations_path(:anchor => "stephane-rondal")
           .name
             = link_to "Stephane Rondal", speakers_path(:anchor => "stephane-rondal")
+          = labels :practitioner
 
         %td
           .presentation-title
             = link_to "Event Driven Architecture in practice", presentations_path(:anchor => "domenico-musto")
           .name
             = link_to "Domenico Musto", speakers_path(:anchor => "domenico-musto")
+          = labels :practitioner
 
         %td
           .presentation-title

@@ -3,12 +3,15 @@
   padding: .2em .6em .3em;
   font-size: 75%;
   font-weight: bold;
-  line-height: 1;
+  line-height: 1.5;
   color: #ffffff;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: .25em;
+  min-width: 7em;
+  display: inline-block;
+  margin: 2px
 }
 .label[href]:hover,
 .label[href]:focus {
@@ -60,4 +63,17 @@
 .label-red[href]:hover,
 .label-red[href]:focus {
   background-color: #c9302c;
+}
+.label-brown {
+  background-color: #C47B3D;
+}
+.label-brown[href]:hover,
+.label-brown[href]:focus {
+  background-color: #C47B3D;
+}.label-purple {
+  background-color: #7D628A;
+}
+.label-purple[href]:hover,
+.label-purple[href]:focus {
+  background-color: #7D628A;
 }
