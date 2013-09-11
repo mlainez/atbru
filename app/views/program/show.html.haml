@@ -140,6 +140,7 @@
           .name
             = link_to "Yves Hanoulle", speakers_path(:anchor => "yves-hanoulle")
 
+          = labels :beginner, :talk
         %td
           .presentation-title
             = link_to "Agility: the scientific definition of how to be(come) Agile", presentations_path(:anchor => "luca-minudel")
@@ -170,7 +171,7 @@
             = link_to "Jurgen De Smet", speakers_path(:anchor => "jurgen-de-smet")
             %br/
             = link_to "& Erik Talboom", speakers_path(:anchor => "erik-talboom")
-          =labels :workshop
+          = labels :beginner, :workshop
 
         %td{ rowspan: 2 }
           .presentation-title
