@@ -75,13 +75,13 @@
             = link_to "Why Agile ?", presentations_path(:anchor => "tiago-garcez")
           .name
             = link_to "Tiago Garcez", speakers_path(:anchor => "tiago-garcez")
-          = labels :beginner
+          = labels :beginner, :talk
         %td
           .presentation-title
             = link_to "A War Story of the Rise and Fall of an \"Agile\" Company", presentations_path(:anchor => "jan-de-baere")
           .name
             = link_to "Jan De Baere", speakers_path(:anchor => "jan-de-baere")
-          = labels :beginner
+          = labels :beginner, :talk
 
         %td
           .presentation-title
@@ -118,7 +118,7 @@
             = link_to "Our Agile Approach to Game Development", presentations_path(:anchor => "laurent-grumiaux")
           .name
             = link_to "Laurent Grumiaux", speakers_path(:anchor => "laurent-grumiaux")
-          = labels :practitioner
+          = labels :practitioner, :talk
 
         %td
           .presentation-title
@@ -163,7 +163,7 @@
             = link_to "The Agile and Open Source Way", presentations_path(:anchor => "alexis-monville")
           .name
             = link_to "Alexis Monville", speakers_path(:anchor => "alexis-monville")
-          = labels :practitioner
+          = labels :practitioner, :talk
 
         %td{ rowspan: 2 }
           .presentation-title
@@ -216,7 +216,7 @@
             = link_to "Real Options: learn when and how (not) to decide", presentations_path(:anchor => "pascal-van-cauwenberghe")
           .name
             = link_to "Pascal Van Cauwenberghe", speakers_path(:anchor => "pascal-van-cauwenberghe")
-          = labels :beginner
+          = labels :beginner, :talk
 
         %td
           .presentation-title
@@ -259,14 +259,14 @@
             = link_to "Lessons learned from scaling Agile to distributed, offshore teams", presentations_path(:anchor => "stephane-rondal")
           .name
             = link_to "Stephane Rondal", speakers_path(:anchor => "stephane-rondal")
-          = labels :practitioner
+          = labels :practitioner, :talk
 
         %td
           .presentation-title
             = link_to "Event Driven Architecture in practice", presentations_path(:anchor => "domenico-musto")
           .name
             = link_to "Domenico Musto", speakers_path(:anchor => "domenico-musto")
-          = labels :practitioner
+          = labels :practitioner, :talk
 
         %td
           .presentation-title
@@ -279,6 +279,7 @@
             = link_to "HR Team Workshop", presentations_path(:anchor => "yannick-ameur")
           .name
             = link_to "Yannick Ameur", speakers_path(:anchor => "yannick-ameur")
+          = labels :practitioner, :workshop
         %td
           .presentation-title
             = link_to "7 types of feedback that helped make GOV.UK a success", presentations_path(:anchor => "jake-benilov")
