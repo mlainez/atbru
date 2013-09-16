@@ -63,8 +63,7 @@
 %section#sponsors
   %br/
   %h2 Supporting communities
-  %p= link_to image_tag( "scrum_alliance_logo_2013.png", class: "sponsor-home"  ), sponsors_path( anchor: "scrum-alliance" )
-
-  - if false # disabled content
-    %p = link_to image_tag( "agile_systems.png", class: "sponsor-home-no-border"), sponsors_path( anchor: "agile-systems" )
-    %p = link_to image_tag( "xp_days.png", class: "sponsor-home-no-border"      ), sponsors_path( anchor: "xp-days" )
+  %p
+    = link_to image_tag( "scrum_alliance_logo_2013.png", class: "sponsor-home-no-border"  ), sponsors_path( anchor: "scrum-alliance" )
+    = link_to image_tag( "agile_systems.png", class: "sponsor-home-no-border"), sponsors_path( anchor: "agile-systems" )
+    = link_to image_tag( "xp_days2013.png", class: "sponsor-home-no-border"      ), sponsors_path( anchor: "xp-days" )
