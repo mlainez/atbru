@@ -10,9 +10,15 @@
 %h1.giant.title Agile Tour Brussels 2013
 .large.ribbon September 27 at EPHEC Brussels
 
+%br/
+%br/
+%section#sponsors.side_content
+  %h3 Supporting communities
+  %p= link_to image_tag( "scrum_alliance_logo_2013.png", class: "sponsor-home-no-border"  ), sponsors_path( anchor: "scrum-alliance" )
+  %p= link_to image_tag( "agile_systems.png", class: "sponsor-home-no-border"), sponsors_path( anchor: "agile-systems" )
+  %p= link_to image_tag( "xp_days2013.png", class: "sponsor-home-no-border"      ), sponsors_path( anchor: "xp-days" )
+
 %section#presentation
-  %br/
-  %br/
   %h2 Welcome to Agile Tour Brussels 2013 !
 
   %p
@@ -60,10 +66,3 @@
   %p At Agile Tour Brussels you will meet a mix of attendees who are either completely new to Agile, experienced or experts.
 
 
-%section#sponsors
-  %br/
-  %h2 Supporting communities
-  %p
-    = link_to image_tag( "scrum_alliance_logo_2013.png", class: "sponsor-home-no-border"  ), sponsors_path( anchor: "scrum-alliance" )
-    = link_to image_tag( "agile_systems.png", class: "sponsor-home-no-border"), sponsors_path( anchor: "agile-systems" )
-    = link_to image_tag( "xp_days2013.png", class: "sponsor-home-no-border"      ), sponsors_path( anchor: "xp-days" )
