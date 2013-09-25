@@ -17,7 +17,7 @@
     = csrf_meta_tags
     %meta{ 'og:image' => "http://www.atbru.be/assets/logo.png" }
 
-  %body
+  %body{ id: "#{action_name}-#{controller_name}" }
     #wrap
       %header#header
         %h1= link_to image_tag("logo.png", :alt => "AgileTour Brussels 2012"), "/"

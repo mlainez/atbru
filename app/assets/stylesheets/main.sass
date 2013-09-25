@@ -435,4 +435,25 @@ img.sponsor
 img.home
   width: 390px
 
-
+@media print
+  body#show-program
+    background: white
+    header, footer,
+    #tweet_button,
+    .explanations
+      display: none
+    .giant.title
+      margin-top: 10px
+      margin-bottom: 10px
+    #content > br
+      display: none
+    table.program
+      width: 100%
+      td
+        padding: 2px
+      .presentation-title
+        line-height: 1.2
+        a
+          min-height: 4.2em
+      .name
+        margin-top: 5px
