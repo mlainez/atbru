@@ -93,18 +93,17 @@
 
         %td
           .presentation-title
-            = link_to "My Product is a James Bond Movie!", presentations_path(:anchor => "pierre-e-neis")
-          .name
-            = link_to "Pierre E. Neis", speakers_path(:anchor => "pierre-e-neis")
-          = labels :talk, :practitioner
-
-        %td
-          .presentation-title
             = link_to "The Sound of Silence", presentations_path(:anchor => "luc-taesch")
           .name
             = link_to "Luc Taesch", speakers_path(:anchor => "luc-taesch")
           = labels :workshop, :beginner
 
+        %td
+          .presentation-title
+            = link_to "My Product is a James Bond Movie!", presentations_path(:anchor => "pierre-e-neis")
+          .name
+            = link_to "Pierre E. Neis", speakers_path(:anchor => "pierre-e-neis")
+          = labels :talk, :practitioner
 
       %tr
         %td.small
