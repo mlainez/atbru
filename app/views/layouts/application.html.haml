@@ -30,11 +30,12 @@
             %li= link_to t("menu.details"), details_url
             /%li=# link_to t("menu.presentations"), presentations_url
         #register-box
-          #counter
-            %span.days
-              = days_left
-            = t("register.days_left")
-          .button= link_to t("register.register"), "http://register.agilesystems.org/"
+          - if show_remaining_days_and_register_button = false
+            #counter
+              %span.days
+                = days_left
+              = t("register.days_left")
+            .button= link_to t("register.register"), "http://register.agilesystems.org/"
       #content
         = yield :carousel
         = render 'shared/tweet_button'
