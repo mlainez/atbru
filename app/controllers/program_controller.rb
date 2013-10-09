@@ -1,5 +1,5 @@
 class ProgramController < ApplicationController
   def show
-    render [ params[:year], 'program', 'show' ].join('/')
+    render [ @year, 'program', 'show' ].join('/')
   end
 end

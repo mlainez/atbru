@@ -1,6 +1,6 @@
 !!!
 - content_for :submenu do
-  - if params[:year] == '2012'
+  - if @year == '2012'
     %ul.edition_2012
       %li= link_to t("menu.speakers"     ), speakers_url(      year: 2012 )
       %li= link_to t("menu.program"      ), program_url(       year: 2012 )
