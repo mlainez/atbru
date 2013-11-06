@@ -1,5 +1,5 @@
 class PresentationsController < ApplicationController
   def index
-    render [ params[:year], 'presentations', 'index' ].join('/')
+    render [ @year, 'presentations', 'index' ].join('/')
   end
 end
