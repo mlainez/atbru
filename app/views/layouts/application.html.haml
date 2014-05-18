@@ -24,9 +24,12 @@
         %nav#main-menu
           %ul
             %li= link_to t("menu.home"), root_url
-            %li= link_to t("menu.speakers"), speakers_url
-            %li= link_to t("menu.program"), program_url
-            %li= link_to t("menu.presentations"), presentations_url
+
+            - if false # TEMPORARLY DISABLE THESE MENU ITEMS
+              %li= link_to t("menu.speakers"), speakers_url
+              %li= link_to t("menu.program"), program_url
+              %li= link_to t("menu.presentations"), presentations_url
+
             %li= link_to t("menu.sponsors"), sponsors_url
             %li= link_to t("menu.details"), details_url
             /%li=# link_to t("menu.presentations"), presentations_url
@@ -67,8 +70,11 @@
         %nav#footer-nav
           %ul
             %li= link_to t("menu.home"), root_url
-            %li= link_to t("menu.speakers"), speakers_url
-            %li= link_to t("menu.program"), program_url
+
+            - if false # TEMPORARLY DISABLE THESE MENU ITEMS
+              %li= link_to t("menu.speakers"), speakers_url
+              %li= link_to t("menu.program"), program_url
+
             %li= link_to t("menu.sponsors"), sponsors_url
             %li= link_to t("menu.details"), details_url
             /%li=# link_to t("menu.presentations"), presentations_url
