@@ -57,6 +57,7 @@ Atbru::Application.routes.draw do
   scope '(:year)' do
     resources :speakers
     resources :sponsors
+    resources :sponsoring
     resources :details
     resources :presentations
     resources :registrations
