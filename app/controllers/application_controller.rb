@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   PREVIOUS_YEARS = ["2012"]
 
   def days_left
-    @days_left = (Date.new(2013, 9, 27) - Date.today).to_i
+    @days_left = (Date.new(2014, 10, 31) - Date.today).to_i
   end
 
   private

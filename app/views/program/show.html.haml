@@ -1,4 +1,4 @@
-%h1.giant.title Agile Tour Brussels 2013
+%h1.giant.title Agile Tour Brussels 2014
 .large.ribbon Program
 
 %br/
@@ -8,295 +8,299 @@
 
 #program
 
-  .explanations
-    %h2 Attendees levels and suggested paths
+  #flash
     %p
-      These path suggestions are for your information only.
+      The program will be published on 20th August 2014. 
+  - if false # OLD PROGRAM TEMPORARLY DISABLE 
+    .explanations
+      %h2 Attendees levels and suggested paths
+      %p
+        These path suggestions are for your information only.
+        %br/
+        This is one of the many ways to organise your day, with no obligation to follow particular sessions.
+      %p
+        You can choose your sessions as you go too.
+        %br/
+        Having discussions with participants,
+        speakers and organisers during the breaks can help you identify the subjects you might be interested in.
+      %p
+        Let yourself be open to your agenda changes and surprises !
+
+      %h3 Beginner-friendly path
+      %p Beginner-friendly  workshops and talks are labeled with #{label :beginner}
+      %p
+        If you are new to Agile, we recommend you to choose between sessions marked as beginner-friendly.
+        %br/
+        Sessions marked with this label don't require any special prerequisites in order to be understood and fully enjoyed.
+
+
+      %h3 Practitioner's path
+      %p Practitioner's workshops and talks are labeled with #{label :practitioner}
+      %p The talks and workshops in this session are targeted for people who are familiar with agile methods and approaches.
+
+      %h3 Expert's path
+      %p Experts workshops and talks are labeled with #{label :expert}
+      %p In these talks and workshops, the basics won't be explained. The presenter assumes that you are well-versed in agile and will present advanced topics.
+
+      %h2 Session types
+      %p During the conference 2 type of sessions are proposed:
+      %ul
+        %li Talks : Presenter is speaking for most of the time (often from a slide deck), with audience interaction. <br /> They are marked with: #{ label :talk }
+        %li Workshops : Primarily focused on hands-on participation with the audience. <br /> They are marked with: #{ label :workshop }
+
       %br/
-      This is one of the many ways to organise your day, with no obligation to follow particular sessions.
-    %p
-      You can choose your sessions as you go too.
-      %br/
-      Having discussions with participants,
-      speakers and organisers during the breaks can help you identify the subjects you might be interested in.
-    %p
-      Let yourself be open to your agenda changes and surprises !
-
-    %h3 Beginner-friendly path
-    %p Beginner-friendly  workshops and talks are labeled with #{label :beginner}
-    %p
-      If you are new to Agile, we recommend you to choose between sessions marked as beginner-friendly.
-      %br/
-      Sessions marked with this label don't require any special prerequisites in order to be understood and fully enjoyed.
 
 
-    %h3 Practitioner's path
-    %p Practitioner's workshops and talks are labeled with #{label :practitioner}
-    %p The talks and workshops in this session are targeted for people who are familiar with agile methods and approaches.
+    %table.program
+      %thead
+        %tr
+          %th.small
+          %th
+            Conference room 1
+          %th
+            Workshop room 1
+          %th
+            Conference room 2
+          %th
+            Workshop room 2
+          %th
+            Conference room 3
+      %tbody
+        %tr
+          %td.small
+            09h00 - 10h00
+          %td{ colspan: 5, class: "food" }
+            Introduction
 
-    %h3 Expert's path
-    %p Experts workshops and talks are labeled with #{label :expert}
-    %p In these talks and workshops, the basics won't be explained. The presenter assumes that you are well-versed in agile and will present advanced topics.
+        %tr
+          %td.small
+            10h00 - 11h00
+          %td
+            .presentation-title
+              = link_to "Why Agile ?", presentations_path(:anchor => "tiago-garcez")
+            .name
+              = link_to "Tiago Garcez", speakers_path(:anchor => "tiago-garcez")
+            = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "A War Story of the Rise and Fall of an \"Agile\" Company", presentations_path(:anchor => "jan-de-baere")
+            .name
+              = link_to "Jan De Baere", speakers_path(:anchor => "jan-de-baere")
+            = labels :beginner, :talk
 
-    %h2 Session types
-    %p During the conference 2 type of sessions are proposed:
-    %ul
-      %li Talks : Presenter is speaking for most of the time (often from a slide deck), with audience interaction. <br /> They are marked with: #{ label :talk }
-      %li Workshops : Primarily focused on hands-on participation with the audience. <br /> They are marked with: #{ label :workshop }
+          %td
+            .presentation-title
+              = link_to "The Road to Lean Success", presentations_path(:anchor => "hans-smorenburg")
+            .name
+              = link_to "Hans Smorenburg", speakers_path(:anchor => "hans-smorenburg")
+            = labels :beginner
 
-    %br/
+          %td
+            .presentation-title
+              = link_to "The Sound of Silence", presentations_path(:anchor => "luc-taesch")
+            .name
+              = link_to "Luc Taesch", speakers_path(:anchor => "luc-taesch")
+            = labels :workshop, :beginner
 
+          %td
+            .presentation-title
+              = link_to "My Product is a James Bond Movie!", presentations_path(:anchor => "pierre-e-neis")
+            .name
+              = link_to "Pierre E. Neis", speakers_path(:anchor => "pierre-e-neis")
+            = labels :talk, :practitioner
 
-  %table.program
-    %thead
-      %tr
-        %th.small
-        %th
-          Conference room 1
-        %th
-          Workshop room 1
-        %th
-          Conference room 2
-        %th
-          Workshop room 2
-        %th
-          Conference room 3
-    %tbody
-      %tr
-        %td.small
-          09h00 - 10h00
-        %td{ colspan: 5, class: "food" }
-          Introduction
+        %tr
+          %td.small
+            11h00 - 11h30
+          %td{ colspan: 5, class: "food"}
+            Break
 
-      %tr
-        %td.small
-          10h00 - 11h00
-        %td
-          .presentation-title
-            = link_to "Why Agile ?", presentations_path(:anchor => "tiago-garcez")
-          .name
-            = link_to "Tiago Garcez", speakers_path(:anchor => "tiago-garcez")
-          = labels :beginner, :talk
-        %td
-          .presentation-title
-            = link_to "A War Story of the Rise and Fall of an \"Agile\" Company", presentations_path(:anchor => "jan-de-baere")
-          .name
-            = link_to "Jan De Baere", speakers_path(:anchor => "jan-de-baere")
-          = labels :beginner, :talk
+        %tr
+          %td.small
+            11h30 - 12h30
+          %td
+            .presentation-title
+              = link_to "Our Agile Approach to Game Development", presentations_path(:anchor => "laurent-grumiaux")
+            .name
+              = link_to "Laurent Grumiaux", speakers_path(:anchor => "laurent-grumiaux")
+              = link_to "& Pierre Guerand", speakers_path(:anchor => "pierre-guerand")
+            = labels :practitioner, :talk
 
-        %td
-          .presentation-title
-            = link_to "The Road to Lean Success", presentations_path(:anchor => "hans-smorenburg")
-          .name
-            = link_to "Hans Smorenburg", speakers_path(:anchor => "hans-smorenburg")
-          = labels :beginner
+          %td
+            .presentation-title
+              = link_to "Cynefin Lego Game", presentations_path(:anchor => "maurizio-pedriale")
+            .name
+              = link_to "Maurizio Pedriale", speakers_path(:anchor => "maurizio-pedriale")
+              = link_to "& Alan Hortz", speakers_path(:anchor => "alan-hortz")
+            = labels :practitioner, :workshop
 
-        %td
-          .presentation-title
-            = link_to "The Sound of Silence", presentations_path(:anchor => "luc-taesch")
-          .name
-            = link_to "Luc Taesch", speakers_path(:anchor => "luc-taesch")
-          = labels :workshop, :beginner
+          %td
+            .presentation-title
+              = link_to "Lean Startup for Developers: You Can Do It Too!", presentations_path(:anchor => "sebastien-arbogast")
+            .name
+              = link_to "Sébastien Arbogast", speakers_path(:anchor => "sebastien-arbogast")
+            = labels :beginner, :talk
 
-        %td
-          .presentation-title
-            = link_to "My Product is a James Bond Movie!", presentations_path(:anchor => "pierre-e-neis")
-          .name
-            = link_to "Pierre E. Neis", speakers_path(:anchor => "pierre-e-neis")
-          = labels :talk, :practitioner
+          %td
+            .presentation-title
+              = link_to "Everything you wanted to know about PairProgramming, but were afraid to ask....", presentations_path(:anchor => "yves-hanoulle")
+            .name
+              = link_to "Yves Hanoulle", speakers_path(:anchor => "yves-hanoulle")
 
-      %tr
-        %td.small
-          11h00 - 11h30
-        %td{ colspan: 5, class: "food"}
-          Break
-
-      %tr
-        %td.small
-          11h30 - 12h30
-        %td
-          .presentation-title
-            = link_to "Our Agile Approach to Game Development", presentations_path(:anchor => "laurent-grumiaux")
-          .name
-            = link_to "Laurent Grumiaux", speakers_path(:anchor => "laurent-grumiaux")
-            = link_to "& Pierre Guerand", speakers_path(:anchor => "pierre-guerand")
-          = labels :practitioner, :talk
-
-        %td
-          .presentation-title
-            = link_to "Cynefin Lego Game", presentations_path(:anchor => "maurizio-pedriale")
-          .name
-            = link_to "Maurizio Pedriale", speakers_path(:anchor => "maurizio-pedriale")
-            = link_to "& Alan Hortz", speakers_path(:anchor => "alan-hortz")
-          = labels :practitioner, :workshop
-
-        %td
-          .presentation-title
-            = link_to "Lean Startup for Developers: You Can Do It Too!", presentations_path(:anchor => "sebastien-arbogast")
-          .name
-            = link_to "Sébastien Arbogast", speakers_path(:anchor => "sebastien-arbogast")
-          = labels :beginner, :talk
-
-        %td
-          .presentation-title
-            = link_to "Everything you wanted to know about PairProgramming, but were afraid to ask....", presentations_path(:anchor => "yves-hanoulle")
-          .name
-            = link_to "Yves Hanoulle", speakers_path(:anchor => "yves-hanoulle")
-
-          = labels :beginner, :talk
-        %td
-          .presentation-title
-            = link_to "Agility: the scientific definition of how to be(come) Agile", presentations_path(:anchor => "luca-minudel")
-          .name
-            = link_to "Luca Minudel", speakers_path(:anchor => "luca-minudel")
-          = labels :practitioner, :talk
+            = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "Agility: the scientific definition of how to be(come) Agile", presentations_path(:anchor => "luca-minudel")
+            .name
+              = link_to "Luca Minudel", speakers_path(:anchor => "luca-minudel")
+            = labels :practitioner, :talk
 
 
-      %tr
-        %td.small
-          12h30 - 13h30
-        %td{ colspan: 5, class: "food"}
-          Lunch
+        %tr
+          %td.small
+            12h30 - 13h30
+          %td{ colspan: 5, class: "food"}
+            Lunch
 
-      %tr
-        %td.small{ rowspan: 2 }
-          13h30 - 14h30
-        %td{ rowspan: 2 }
-          .presentation-title
-            = link_to "The Agile and Open Source Way", presentations_path(:anchor => "alexis-monville")
-          .name
-            = link_to "Alexis Monville", speakers_path(:anchor => "alexis-monville")
-          = labels :practitioner, :talk
+        %tr
+          %td.small{ rowspan: 2 }
+            13h30 - 14h30
+          %td{ rowspan: 2 }
+            .presentation-title
+              = link_to "The Agile and Open Source Way", presentations_path(:anchor => "alexis-monville")
+            .name
+              = link_to "Alexis Monville", speakers_path(:anchor => "alexis-monville")
+            = labels :practitioner, :talk
 
-        %td{ rowspan: 2 }
-          .presentation-title
-            = link_to "Perfect Problem Breakthrough", presentations_path(:anchor => "jurgen-de-smet")
-          .name
-            = link_to "Jurgen De Smet", speakers_path(:anchor => "jurgen-de-smet")
-            %br/
-            = link_to "& Erik Talboom", speakers_path(:anchor => "erik-talboom")
-          = labels :beginner, :workshop
+          %td{ rowspan: 2 }
+            .presentation-title
+              = link_to "Perfect Problem Breakthrough", presentations_path(:anchor => "jurgen-de-smet")
+            .name
+              = link_to "Jurgen De Smet", speakers_path(:anchor => "jurgen-de-smet")
+              %br/
+              = link_to "& Erik Talboom", speakers_path(:anchor => "erik-talboom")
+            = labels :beginner, :workshop
 
-        %td{ rowspan: 2 }
-          .presentation-title
-            = link_to "4 steps to co-create the right product, let's talk about Lean Design", presentations_path(:anchor => "pierrick-revol")
-          .name
-            = link_to "Pierrick Revol", speakers_path(:anchor => "pierrick-revol")
-          = labels :beginner, :talk
+          %td{ rowspan: 2 }
+            .presentation-title
+              = link_to "4 steps to co-create the right product, let's talk about Lean Design", presentations_path(:anchor => "pierrick-revol")
+            .name
+              = link_to "Pierrick Revol", speakers_path(:anchor => "pierrick-revol")
+            = labels :beginner, :talk
 
-        %td
-          .presentation-title
-            = link_to "1+9 visual management tools", presentations_path(:anchor => "damien-thouvenin")
-          .name
-            = link_to "Damien Thouvenin", speakers_path(:anchor => "damien-thouvenin")
-          = labels :beginner, :talk
-        %td
-          .presentation-title
-            = link_to "Agile Methodologies For Research", presentations_path(:anchor => "joanne-ho")
-          .name
-            = link_to "Joanne Ho", speakers_path(:anchor => "joanne-ho")
-          = labels :practitioner, :talk
-      %tr
-        %td
-          .presentation-title
-            = link_to "SCRUM explained to children", presentations_path(:anchor => "lahcen-afif")
-          .name
-            = link_to "Lahcen Afif", speakers_path(:anchor => "lahcen-afif")
-          = labels :beginner
-        %td
-
-
-      %tr
-        %td.small
-          14h30 - 15h00
-        %td{ colspan: 5, class: "food" }
-          Break
-
-      %tr
-        %td.small
-          15h00 - 16h00
-        %td
-          .presentation-title
-            = link_to "Real Options: learn when and how (not) to decide", presentations_path(:anchor => "pascal-van-cauwenberghe")
-          .name
-            = link_to "Pascal Van Cauwenberghe", speakers_path(:anchor => "pascal-van-cauwenberghe")
-          = labels :beginner, :talk
-
-        %td
-          .presentation-title
-            = link_to "Easy to use correctly and hard to use incorrectly", presentations_path(:anchor => "christophe-addinquy")
-          .name
-            = link_to "Christophe Addinquy", speakers_path(:anchor => "christophe-addinquy")
-          = labels :beginner, :workshop
-
-        %td
-          .presentation-title
-            = link_to "Applying Lean Thinking to software development", presentations_path(:anchor => "steven-peeters")
-          .name
-            = link_to "Steven Peeters", speakers_path(:anchor => "steven-peeters")
-          = labels :practitioner, :talk
-
-        %td
-          .presentation-title
-            = link_to "Kickstart your Product Backlog with Innovation Games", presentations_path(:anchor => "frederic-vandaele")
-          .name
-            = link_to "Frederic Vandaele", speakers_path(:anchor => "frederic-vandaele")
-          = labels :beginner
-
-        %td
-          .presentation-title
-            = link_to "Managing without authority : lessons learnt as a dungeon master", presentations_path(:anchor => "guillaume-duquesnay")
-          .name
-            = link_to "Guillaume Duquesnay", speakers_path(:anchor => "guillaume-duquesnay")
-          = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "1+9 visual management tools", presentations_path(:anchor => "damien-thouvenin")
+            .name
+              = link_to "Damien Thouvenin", speakers_path(:anchor => "damien-thouvenin")
+            = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "Agile Methodologies For Research", presentations_path(:anchor => "joanne-ho")
+            .name
+              = link_to "Joanne Ho", speakers_path(:anchor => "joanne-ho")
+            = labels :practitioner, :talk
+        %tr
+          %td
+            .presentation-title
+              = link_to "SCRUM explained to children", presentations_path(:anchor => "lahcen-afif")
+            .name
+              = link_to "Lahcen Afif", speakers_path(:anchor => "lahcen-afif")
+            = labels :beginner
+          %td
 
 
-      %tr
-        %td.small
-          16h00 - 16h15
-        %td{ colspan: 5, class: "food" }
-          Break
+        %tr
+          %td.small
+            14h30 - 15h00
+          %td{ colspan: 5, class: "food" }
+            Break
 
-      %tr
-        %td.small
-          16h15 - 17h15
-        %td
-          .presentation-title
-            = link_to "Lessons learned from scaling Agile to distributed, offshore teams", presentations_path(:anchor => "stephane-rondal")
-          .name
-            = link_to "Stephane Rondal", speakers_path(:anchor => "stephane-rondal")
-          = labels :practitioner, :talk
+        %tr
+          %td.small
+            15h00 - 16h00
+          %td
+            .presentation-title
+              = link_to "Real Options: learn when and how (not) to decide", presentations_path(:anchor => "pascal-van-cauwenberghe")
+            .name
+              = link_to "Pascal Van Cauwenberghe", speakers_path(:anchor => "pascal-van-cauwenberghe")
+            = labels :beginner, :talk
 
-        %td
-          .presentation-title
-            = link_to "Event Driven Architecture in practice", presentations_path(:anchor => "domenico-musto")
-          .name
-            = link_to "Domenico Musto", speakers_path(:anchor => "domenico-musto")
-          = labels :practitioner, :talk
+          %td
+            .presentation-title
+              = link_to "Easy to use correctly and hard to use incorrectly", presentations_path(:anchor => "christophe-addinquy")
+            .name
+              = link_to "Christophe Addinquy", speakers_path(:anchor => "christophe-addinquy")
+            = labels :beginner, :workshop
 
-        %td
-          .presentation-title
-            = link_to "The scrum board mystery files: To post-it or not to post-it", presentations_path(:anchor => "peter-duelen")
-          .name
-            = link_to "Peter Duelen", speakers_path(:anchor => "peter-duelen")
-          = labels :practitioner, :talk
+          %td
+            .presentation-title
+              = link_to "Applying Lean Thinking to software development", presentations_path(:anchor => "steven-peeters")
+            .name
+              = link_to "Steven Peeters", speakers_path(:anchor => "steven-peeters")
+            = labels :practitioner, :talk
 
-        %td
-          .presentation-title
-            = link_to "HR Team Workshop", presentations_path(:anchor => "yannick-ameur")
-          .name
-            = link_to "Yannick Ameur", speakers_path(:anchor => "yannick-ameur")
-          = labels :practitioner, :workshop
-        %td
-          .presentation-title
-            = link_to "7 types of feedback that helped make GOV.UK a success", presentations_path(:anchor => "jake-benilov")
-          .name
-            = link_to "Jake Benilov", speakers_path(:anchor => "jake-benilov")
-          = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "Kickstart your Product Backlog with Innovation Games", presentations_path(:anchor => "frederic-vandaele")
+            .name
+              = link_to "Frederic Vandaele", speakers_path(:anchor => "frederic-vandaele")
+            = labels :beginner
+
+          %td
+            .presentation-title
+              = link_to "Managing without authority : lessons learnt as a dungeon master", presentations_path(:anchor => "guillaume-duquesnay")
+            .name
+              = link_to "Guillaume Duquesnay", speakers_path(:anchor => "guillaume-duquesnay")
+            = labels :beginner, :talk
 
 
-      %tr
-        %td.small
-          17h15 - 18h00
-        %td{ colspan: 5, class: "food" }
-          Closing
+        %tr
+          %td.small
+            16h00 - 16h15
+          %td{ colspan: 5, class: "food" }
+            Break
+
+        %tr
+          %td.small
+            16h15 - 17h15
+          %td
+            .presentation-title
+              = link_to "Lessons learned from scaling Agile to distributed, offshore teams", presentations_path(:anchor => "stephane-rondal")
+            .name
+              = link_to "Stephane Rondal", speakers_path(:anchor => "stephane-rondal")
+            = labels :practitioner, :talk
+
+          %td
+            .presentation-title
+              = link_to "Event Driven Architecture in practice", presentations_path(:anchor => "domenico-musto")
+            .name
+              = link_to "Domenico Musto", speakers_path(:anchor => "domenico-musto")
+            = labels :practitioner, :talk
+
+          %td
+            .presentation-title
+              = link_to "The scrum board mystery files: To post-it or not to post-it", presentations_path(:anchor => "peter-duelen")
+            .name
+              = link_to "Peter Duelen", speakers_path(:anchor => "peter-duelen")
+            = labels :practitioner, :talk
+
+          %td
+            .presentation-title
+              = link_to "HR Team Workshop", presentations_path(:anchor => "yannick-ameur")
+            .name
+              = link_to "Yannick Ameur", speakers_path(:anchor => "yannick-ameur")
+            = labels :practitioner, :workshop
+          %td
+            .presentation-title
+              = link_to "7 types of feedback that helped make GOV.UK a success", presentations_path(:anchor => "jake-benilov")
+            .name
+              = link_to "Jake Benilov", speakers_path(:anchor => "jake-benilov")
+            = labels :beginner, :talk
+
+
+        %tr
+          %td.small
+            17h15 - 18h00
+          %td{ colspan: 5, class: "food" }
+            Closing

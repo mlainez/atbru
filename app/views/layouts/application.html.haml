@@ -27,14 +27,13 @@
 
             - if false # TEMPORARLY DISABLE THESE MENU ITEMS
               %li= link_to t("menu.speakers"), speakers_url
-              %li= link_to t("menu.program"), program_url
               %li= link_to t("menu.presentations"), presentations_url
-
+            %li= link_to t("menu.program"), program_url
             %li= link_to t("menu.sponsors"), sponsors_url
             %li= link_to t("menu.details"), details_url
             /%li=# link_to t("menu.presentations"), presentations_url
         #register-box
-          - if show_remaining_days_and_register_button = false
+          - if show_remaining_days_and_register_button = true
             #counter
               %span.days
                 = days_left
