@@ -9,9 +9,263 @@
 #program
 
   #flash
-    %p
-      The program will be published on 20th August 2014. 
-  - if false # OLD PROGRAM TEMPORARLY DISABLE 
+
+    %table.program
+      %thead
+        %tr
+          %th.small
+          %th
+            Conference room 1
+          %th
+            Conference room 2
+          %th
+            Conference room 3
+          %th
+            Workshop room 1
+          %th
+            Workshop room 2
+          %th
+            Workshop room 3            
+      %tbody
+        %tr
+          %td.small
+            09h00 - 10h00
+          %td{ colspan: 6, class: "food" }
+            Introduction
+        %tr
+          %td.small
+            10h00 - 11h00
+          %td
+            .presentation-title
+              = link_to "Introduction to Agile", presentations_path(:anchor => "bruno-sbille")
+            .name
+              = link_to "Bruno Sbille", speakers_path(:anchor => "bruno-sbille")
+            = labels :beginner, :talk
+
+          %td
+            .presentation-title
+              = link_to "Doing Valuable Agile Retrospectives", presentations_path(:anchor => "ben-linders")
+            .name
+              = link_to "Ben Linders", speakers_path(:anchor => "ben-linders")
+            = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "Turn the Ship Around - Create Leadership at Every Level", presentations_path(:anchor => "wim-heemskerk")
+            .name
+              = link_to "Wim Heemskerk", speakers_path(:anchor => "wim-heemskerk")
+            = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "Continuous delivery made possible", presentations_path(:anchor => "domenico-musto")
+            .name
+              = link_to "Domenico Musto", speakers_path(:anchor => "domenico-musto")
+            = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "The multi-level feedback cycle", presentations_path(:anchor => "kris-philippaerts")
+            .name
+              = link_to "Kris Philippaerts", speakers_path(:anchor => "kris-philippaerts")
+            = labels :practitioner, :workshop
+          %td
+            .presentation-title
+              = link_to "I believe I can draw", presentations_path(:anchor => "frederic-vandaele")
+            .name
+              = link_to "Frederic Vandaele", speakers_path(:anchor => "frederic-vandaele")
+            = labels :beginner, :workshop
+        %tr
+          %td.small
+            11h00 - 11h30
+          %td{ colspan: 6, class: "food" }
+            Break
+        %tr
+          %td.small
+            11h30 - 12h30
+          %td
+            .presentation-title
+              = link_to "Return of experience : uMedia", presentations_path(:anchor => "arik-azoulay")
+            .name
+              = link_to "Arik Azoulay", speakers_path(:anchor => "arik-azoulay")
+            = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "Scrum of Scrums: examples", presentations_path(:anchor => "jan-de-baere")
+            .name
+              = link_to "Jan De Baere", speakers_path(:anchor => "jan-de-baere")
+            = labels :practitioner, :talk
+          %td
+            .presentation-title
+              = link_to "The wisdom of the Enneagram - Discover and Evolve your Personality Type", presentations_path(:anchor => "peter-moreno")
+            .name
+              = link_to "Peter Moreno", speakers_path(:anchor => "peter-moreno")
+            = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "The Product Owner Board Game", presentations_path(:anchor => "dajo-breddels")
+            .name
+              = link_to "Dajo Breddels", speakers_path(:anchor => "dajo-breddels")
+            = labels :practitioner, :workshop       
+          %td
+            .presentation-title
+              = link_to "Acceptance Tests Workshop", presentations_path(:anchor => "christophe-addinquy")
+            .name
+              = link_to "Christophe Addinquy", speakers_path(:anchor => "christophe-addinquy")
+            = labels :practitioner, :workshop         
+          %td
+            .presentation-title
+              = link_to "Intrinsic agile coaching - Agile coaching without coaches", presentations_path(:anchor => "patrick-steyaert")
+            .name
+              = link_to "Patrick Steyaert", speakers_path(:anchor => "patrick-steyaert")
+            = labels :beginner, :workshop
+        %tr
+          %td.small
+            12h30 - 14h00
+          %td{ colspan: 6, class: "food" }
+            Lunch
+        %tr
+          %td.small
+            14h00 - 15h00
+          %td
+            .presentation-title
+              = link_to "HR in Agile, Agile in HR", presentations_path(:anchor => "jas-chong")
+            .name
+              = link_to "Jas Chong", speakers_path(:anchor => "jas-chong")
+            = labels :beginner, :workshop
+          %td
+            .presentation-title
+              = link_to "A voyage among our Cognitive Biases", presentations_path(:anchor => "oana-juncu")
+            .name
+              = link_to "Oana Juncu", speakers_path(:anchor => "oana-juncu")
+            = labels :beginner, :workshop
+          %td
+            .presentation-title
+              = link_to "Management is Dead", presentations_path(:anchor => "stephane-rondal")
+            .name
+              = link_to "Stephane Rondal", speakers_path(:anchor => "stephane-rondal")
+            = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "Using the Improvement Kata for retrospectives", presentations_path(:anchor => "nick-oostvogels")
+            .name
+              = link_to "Nick Oostvogels", speakers_path(:anchor => "nick-oostvogels")
+            = labels :beginner, :workshop
+          %td
+            .presentation-title
+              = link_to "Small Controlled Experiments", presentations_path(:anchor => "mathias-verraes")
+            .name
+              = link_to "Mathias Verraes", speakers_path(:anchor => "mathias-verraes")
+            = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "Buy a game - Let's seriously Play!", presentations_path(:anchor => "simon-jaillais")
+            .name
+              = link_to "Simon Jaillais", speakers_path(:anchor => "simon-jaillais")
+            = labels :beginner, :talk
+        %tr
+          %td.small
+            15h00 - 15h30
+          %td{ colspan: 6, class: "food" }
+            Break
+        %tr
+          %td.small
+            15h30 - 16h30
+          %td
+            .presentation-title
+              = link_to "How NOT to scale Agile - a Via Negativa perspective on the scaling challenge", presentations_path(:anchor => "tiago-garcez")
+            .name
+              = link_to "Tiago Garcez", speakers_path(:anchor => "tiago-garcez")
+            = labels :practitioner, :talk
+          %td
+            .presentation-title
+              = link_to "Soyez très performant et innovant grâce au désordre !", presentations_path(:anchor => "xavier-warzee")
+            .name
+              = link_to "Xavier Warzee", speakers_path(:anchor => "xavier-warzee")
+            = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "The importance of code readability", presentations_path(:anchor => "michel-grootjans")
+            .name
+              = link_to "Michel Grootjans", speakers_path(:anchor => "michel-grootjans")
+            = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "Changemakers (workshop - based on Management 3.0)", presentations_path(:anchor => "andrea-darabos")
+            .name
+              = link_to "Andrea Darabos", speakers_path(:anchor => "andrea-darabos")
+            = labels :beginner, :workshop
+          %td
+            .presentation-title
+              = link_to "Game Cube", presentations_path(:anchor => "alexandre-boutin")
+            .name
+              = link_to "Alexandre Boutin", speakers_path(:anchor => "alexandre-boutin")
+            = labels :beginner, :workshop
+          %td
+            .presentation-title
+              = link_to "Taskular Testing", presentations_path(:anchor => "dean-bodart")
+            .name
+              = link_to "Dean Bodart", speakers_path(:anchor => "dean-bodart")
+            = labels :beginner, :workshop
+        %tr
+          %td.small
+            16h30 - 16h45
+          %td{ colspan: 6, class: "food" }
+            Break
+        %tr
+          %td.small{ rowspan: 2 }
+            16h45 - 17h45
+          %td{ rowspan: 2 }
+            .presentation-title
+              = link_to "Evidence-Based Management", presentations_path(:anchor => "gunther-verheyen")
+            .name
+              = link_to "Gunther Verheyen", speakers_path(:anchor => "gunther-verheyen")
+            = labels :beginner, :talk
+          %td{ rowspan: 2 }
+            .presentation-title
+              = link_to "Discover the shortest path to the business goal", presentations_path(:anchor => "cliff-depreytere")
+            .name
+              = link_to "Cliff Depreytere", speakers_path(:anchor => "cliff-depreytere")
+            = labels :beginner, :talk
+          %td{ rowspan: 2 }
+            .presentation-title
+              = link_to "Agile in fix price, fix scope and fix date", presentations_path(:anchor => "sophie-de-carriere")
+            .name
+              = link_to "Sophie de Carrière", speakers_path(:anchor => "sophie-de-carriere")
+
+              = link_to "Gilles Scokart", speakers_path(:anchor => "gilles-scokart")
+            = labels :beginner, :talk
+          %td{ rowspan: 2 }
+            .presentation-title
+              = link_to "My Product is a James Bond Movie: \"James wants to be a N'aavi\" ... closing the roadshow loop", presentations_path(:anchor => "pierre-e-neis")
+            .name
+              = link_to "Pierre E. Neis", speakers_path(:anchor => "pierre-e-neis")
+            = labels :beginner, :talk
+          %td
+            .presentation-title
+              = link_to "Agile Writing", presentations_path(:anchor => "martin-van-aken")
+            .name
+              = link_to "Martin Van Aken", speakers_path(:anchor => "martin-van-aken")
+            = labels :beginner, :talk         
+
+          %td{ rowspan: 2 }
+            .presentation-title
+              = link_to "Celebrating 1 year of Collaboration Driven Development (CDD)", presentations_path(:anchor => "patrice-willemot")
+            .name
+              = link_to "Patrice Willemot", speakers_path(:anchor => "patrice-willemot")
+            = labels :beginner, :talk
+
+
+        %tr
+          %td    
+            .presentation-title
+              = link_to "Are you Really Agile - \"An Agility Evaluation\"", presentations_path(:anchor => "vijayanand-nagaraj")
+            .name
+              = link_to "Vijayanand Nagaraj", speakers_path(:anchor => "vijayanand-nagaraj")
+            = labels :practitioner, :workshop         
+        %tr
+          %td.small
+            17h45 - 18h00
+          %td{ colspan: 6, class: "food" }
+            Closing
+            
     .explanations
       %h2 Attendees levels and suggested paths
       %p
@@ -50,28 +304,7 @@
 
       %br/
 
-
-    %table.program
-      %thead
-        %tr
-          %th.small
-          %th
-            Conference room 1
-          %th
-            Workshop room 1
-          %th
-            Conference room 2
-          %th
-            Workshop room 2
-          %th
-            Conference room 3
-      %tbody
-        %tr
-          %td.small
-            09h00 - 10h00
-          %td{ colspan: 5, class: "food" }
-            Introduction
-
+      - if false # OLD PROGRAM TEMPORARLY DISABLE 
         %tr
           %td.small
             10h00 - 11h00
@@ -154,8 +387,6 @@
             .name
               = link_to "Luca Minudel", speakers_path(:anchor => "luca-minudel")
             = labels :practitioner, :talk
-
-
         %tr
           %td.small
             12h30 - 13h30
