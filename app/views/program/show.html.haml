@@ -159,6 +159,9 @@
               = link_to "Buy a game - Let's seriously Play!", presentations_path(:anchor => "simon-jaillais")
             .name
               = link_to "Simon Jaillais", speakers_path(:anchor => "simon-jaillais")
+              %br
+              %br
+              = link_to "Aurélien Morvant", speakers_path(:anchor => "aurelien-morvant")
             = labels :beginner, :talk
         %tr
           %td.small
@@ -229,7 +232,8 @@
               = link_to "Agile in fix price, fix scope and fix date", presentations_path(:anchor => "sophie-de-carriere")
             .name
               = link_to "Sophie de Carrière", speakers_path(:anchor => "sophie-de-carriere")
-
+              %br
+              %br
               = link_to "Gilles Scokart", speakers_path(:anchor => "gilles-scokart")
             = labels :beginner, :talk
           %td{ rowspan: 2 }
@@ -265,7 +269,7 @@
             17h45 - 18h00
           %td{ colspan: 6, class: "food" }
             Closing
-            
+
     .explanations
       %h2 Attendees levels and suggested paths
       %p
