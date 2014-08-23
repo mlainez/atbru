@@ -55,6 +55,18 @@
               = flash[:error]
         = yield
       .push
+    %footer#footer-sponsors
+      .wrap
+        %h1.giant.title Sponsors
+        #img-box
+          =link_to image_tag("small_grey_Cegeka logo.png", :alt => "Cegeka"), "http://www.cegeka.com/"
+          =link_to image_tag("small_grey_scrum_alliance_logo_2013.png", :alt => "Scrum Alliance"), "http://www.scrumalliance.org"
+          =link_to image_tag("small_grey_pyxis_logo.png", :alt => "Pyxis"), "http://pyxis-tech.com/en"
+          =link_to image_tag("small_grey_bruno_cms.png", :alt => "BrunoSbille.com"), "http://brunosbille.com/?page_id=2079&lang=fr"
+          =link_to image_tag("small_grey_bruno_cspo.png", :alt => "BrunoSbille.com"), "http://brunosbille.com/?page_id=2079&lang=fr"
+          =link_to image_tag("small_grey_LogoWemanity.png", :alt => "Wemanity"), "http://www.wemanity.com/"
+
+
     %footer#footer
       .wrap
         .copyright= t("footer.copyright")
