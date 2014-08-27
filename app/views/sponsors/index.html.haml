@@ -48,7 +48,7 @@
       %p= image_tag "xp_days2014.png"
       %p
         XP Day Benelux is an international conference about Agile methods, intended for people from all walks of life who are involved with IT. It provides a good opportunity for exchanging ideas and sharing experiences and is suited for both experienced participants and beginners in Agile methods. The focus of this conference is on practical knowledge, real-world experience, and active participation of everyone.
-      %p= link_to "More info", "http://xpdays.net"
+      %p= link_to "More info", "http://xpdays.net" , :target => "_blank"
 
     %section.sponsor#agile-systems
       %p= image_tag "agile_systems.png"
@@ -56,29 +56,20 @@
         Agile Systems is a non-profit whose goals are to build up and disseminate knowledge and experience related to Agile methods and Systems Thinking.
       %p
         The organisation operates mainly in The Netherlands and Belgium. We maintain ties with organisations and people worldwide who have the same interests.
-      %p= link_to "More info", "http://agilesystems.org"
+      %p= link_to "More info", "http://agilesystems.org", :target => "_blank"
 
     %section.sponsor#stattys
       %p= image_tag "stattys.png"
       %p
         We believe that despite the ever increasing amount of apps and software solutions, for the early phase of a creative process, using a pen and Stattys, is still often the most productive, flexible and even fun way to work. <a href="http://www.stattys.com/">Stattys</a> are reusable, recyclable and light to travel with.
-      %p= link_to "More info", "http://www.stattys.com"
+      %p= link_to "More info", "http://www.stattys.com", :target => "_blank"
+
 
     %br/
     %br/
+    %section.sponsor#agile-belgium
+      %p= link_to image_tag("Agile Belgium.png", :class => "sponsor"), "http://www.agilebelgium.org/", :target => "_blank"
     :markdown
-
-      [ #{ image_tag "agileholland_logo_mini.gif", class: :sponsor } ]( http://agileholland.com/ )
-
-      [Agile Holland](http://agileholland.com/) is een onafhankelijke organisatie van en voor Agile practisanten
-      in Nederland. Het is onze missie om het toepassen van Agile principes en
-      praktijken te promoten.
-
-    %br/
-    %br/
-    :markdown
-
-      [ #{ image_tag "Agile Belgium.png", class: :sponsor } ]( http://www.agilebelgium.org/ )
 
       The [Agile Belgium](http://www.agilebelgium.org/) user group is here to share experiences with you, teach new
       useful techniques and to support everyone who wants to improve their software
@@ -89,20 +80,20 @@
 
     %br/
     %br/
+    %section.sponsor#journee-agile
+      %p= link_to image_tag("journeeagile.png", :class => "sponsor"), "http://www.journeeagile.be/", :target => "_blank"
+
     :markdown
 
-      [ #{ image_tag "dotnethublogo.jpg", class: :sponsor } ]( http://www.dotnethub.be/ )
-      [ #{ image_tag "journeeagile.png", class: :sponsor } ]( http://www.journeeagile.be/ )
-
-      [DotNetHub](http://www.dotnethub.be/), la communauté Agle et .NET francophone. Nous organisons la [Journée
-            Agile](http://www.journeeagile.be/), la conférence agile francophone en Belgique.
+      La [Journée Agile](http://www.journeeagile.be/), la conférence agile francophone en Belgique.
 
 
     %br/
     %br/
-    :markdown
+    %section.sponsor#journee-agile
+      %p= link_to image_tag("AgileConsortium_logo_medium.png", :class => "sponsor"), "http://www.agileconsortium.net/category/belgium/", :target => "_blank"
 
-      [ #{ image_tag "AgileConsortium_logo_medium.png", class: :sponsor } ]( http://www.agileconsortium.net/category/belgium/ )
+    :markdown
 
       The goal of the [Agile Consortium Belgium](http://www.agileconsortium.net/category/belgium/) is to offer organisations an
       independent platform where Agile knowledge can be shared. By learning and
@@ -110,25 +101,13 @@
       to become more effective.
 
 
+    %br/
+    %br/
+    %section.sponsor#devops-days
+      %p= link_to image_tag("devopsdays-logo.png", :class => "sponsor"), "http://devopsdays.org/events/2014-belgium/", :target => "_blank"
 
-    %br/
-    %br/
     :markdown
 
-      [ #{ image_tag "scrumday_europe_logo.png", class: :sponsor } ]( http://www.scrumdayeurope.com/ )
-
-      [Scrum Day Europe](http://www.scrumdayeurope.com/) is a great and lively journey for and by the Agile community
-      and friends of Scrum. In 2012, we shared how software can indeed be created in
-      30 days. Last year, we expanded our discussion on extending Scrum into the
-      Enterprise. With tremendous momentum, join us again on July 3 for our program
-      on Evidence-Based Management.
-
-
-    %br/
-    %br/
-    :markdown
-
-      [ #{ image_tag "devopsdays-logo.png", class: :sponsor } ]( http://devopsdays.org/events/2014-belgium/ )
 
       [DevOps Days](http://devopsdays.org/events/2014-belgium/), the conference that brings development and operations
       together. Thie 5th year anniversary edition will take place on 27 & 28
