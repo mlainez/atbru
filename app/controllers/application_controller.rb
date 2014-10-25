@@ -3,10 +3,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :set_year
 
-  PREVIOUS_YEARS = ["2012"]
+  PREVIOUS_YEARS = ["2013"]
 
   def days_left
-    @days_left = (Date.new(2014, 10, 31) - Date.today).to_i
+    @days_left = (Date.new(2014, 10, 28) - Date.today).to_i
   end
 
   private
