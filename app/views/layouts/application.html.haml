@@ -33,7 +33,7 @@
             %li= link_to t("menu.details"), details_url
             /%li=# link_to t("menu.presentations"), presentations_url
         #register-box
-          - if show_remaining_days_and_register_button = true
+          - if show_remaining_days_and_register_button = false
             #counter
               %span.days
                 = days_left
